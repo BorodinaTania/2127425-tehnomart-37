@@ -11,6 +11,143 @@
   </head>
 
   <body>
+
+    <!--ШАПКА-->
+    <header class="header">
+      <div class="header-container container">
+
+        <h1 class="header-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+        <address class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+        <a class="header-phone link" href="tel:+7812555-05-55">+7&nbsp;(812)&nbsp;555-05-55</a>
+
+        <!--НАВИГАЦИЯ-->
+        <nav class="navigation">
+
+          <a class="navigation-logo logo link" href="index.html" aria-current="page">
+            <img class="navigation-img" src="images/logo/logo.svg" width="220" height="50" alt="Логотип.">
+          </a>
+
+          <form class="navigation-search" action="https://echo.htmlacademy.ru" method="get">
+            <label class="navigation-search-label">
+              <input class="navigation-search-input" type="text" name="text" placeholder="Поиск:">
+              <span class="visually-hidden">Введите название товара</span>
+            </label>
+          </form>
+
+          <ul class="navigation-user list-reset">
+
+            <!--ВХОД-->
+
+
+            <!-- Класс dropdown-log-in открывает всплывающее окно c авторизированным пользователем-->
+            <!-- Класс dropdown-log-out открывает всплывающее окно c не авторизированным пользователем-->
+
+            <li class="navigation-user-item dropdown dropdown-log-out">
+              <a class="navigation-user-link link dropdown-link" href="#">
+                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="none">
+                  <path fill="#fff" fill-rule="evenodd"
+                    d="M9 2h5v12H9v2h7V0H9v2ZM4.3 3.7l3.24 3.25H0v2h7.54l-3.25 3.24 1.42 1.42 4.95-4.95.7-.71-.7-.7L5.7 2.28 4.29 3.71Z"
+                    clip-rule="evenodd" />
+                </svg>
+                <span>Вход</span>
+              </a>
+
+              <div class="login dropdown-container">
+
+                <div class="login-content login-content-log-in">
+                  <h2 class="login-title dropdown-title">Личный кабинет</h2>
+
+                  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                    <label class="visually-hidden" for="text">Введите ваш логин</label>
+                    <input class="login-input form-input" type="text" name="text" id="text" placeholder="Логин"
+                      required>
+
+                    <label class="visually-hidden" for="password">Введите ваш пароль</label>
+                    <input class="login-input form-input" type="password" name="password" id="password"
+                      placeholder="Пароль" required>
+
+                    <div class="login-wrapper">
+                      <label class="login-remember">
+                        <input class="login-remember-input" type="checkbox" name="remember-me" checked>
+                        <span class="login-remember-label">Запомнить меня</span>
+                      </label>
+                      <a class="login-link link" href="#">Забыл пароль</a>
+                    </div>
+
+                    <div class="login-wrapper-buttons">
+                      <button class="login-button button" type="submit">Войти</button>
+                      <a class="login-button button link" href="#">Регистрация</a>
+                    </div>
+
+                    <button class="login-button-close" type="button">
+                      <span class="visually-hidden">Закрыть.</span>
+                    </button>
+                  </form>
+                </div>
+
+                <div class="login-content login-content-log-out">
+                  <h2 class="login-title dropdown-title">Здравствуйте, Равшан Джамшутович</h2>
+
+                  <a class="login-link link" href="#">Мои заказы</a>
+                  <a class="login-link link" href="#">Личный кабинет</a>
+                  <button class="login-button button" type="submit">Выйти</button>
+
+                  <button class="login-button-close" type="button">
+                    <span class="visually-hidden">Закрыть.</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            <li class="navigation-list list-reset">
+              <ul>
+                <li class="navigation-item">
+                  <a class="navigation-link link" href="#">Главная</a>
+                </li>
+                <li class="navigation-item">
+                  <a class="navigation-link link" href="#">Компания</a>
+                </li>
+                <li class="navigation-item">
+                  <a class="navigation-link link" href="#">Каталог</a>
+                </li>
+                <li class="navigation-item">
+                  <a class="navigation-link link" href="#">Новости</a>
+                </li>
+                <li class="navigation-item">
+                  <a class="navigation-link link" href="#">Спецпредложения</a>
+                </li>
+                <li class="navigation-item">
+                  <a class="navigation-link link" href="#">Доставка</a>
+                </li>
+                <li class="navigation-item">
+                  <a class="navigation-link link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="navigation-user-item user-item-favourites">
+              <a class="navigation-user-link link" href="#">
+                <span class="visually-hidden">Избранное</span>
+              </a>
+            </li>
+            <li class="navigation-user-item user-item-basket">
+              <a class="navigation-user-link link" href="#">
+                <span class="visually-hidden">Корзина</span>
+              </a>
+            </li>
+            <li class="navigation-user-item">
+              <a class="navigation-user-link user-link-order link" href="#">Оформить заказ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+
+
+
   </body>
 
 </html>
