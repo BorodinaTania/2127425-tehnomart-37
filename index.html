@@ -144,7 +144,7 @@
                   </a>
                 </li>
                 <li class="navigation-user-item">
-                  <a class="navigation-user-link user-link-order link" href="#">Оформить заказ</a>
+                  <a class="navigation-user-link user-link-order link button" href="#">Оформить заказ</a>
                 </li>
               </ul>
             </div>
@@ -156,6 +156,7 @@
     <!--MAIN-->
     <main class="main-page">
 
+      <!--ПОПУЛЯРНОЕ-->
       <!--КАТЕГОРИИ ТОВАРОВ-->
 
       <div class="popular container">
@@ -164,35 +165,35 @@
           <h2 class="visually-hidden">Категории товаров</h2>
 
           <ul class="categories-list list-reset">
-            <li class="categories-item categories-new">
-              <h3 class="categories-title">Материалы</h3>
+            <li class="categories-item popular-item categories-item-materials new">
+              <h3 class="categories-title popular-title">Материалы</h3>
               <a class="categories-link link button" href="#">
                 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="9" height="14"
                   fill="none">
-                  <path fill="#fff" fill-rule="evenodd"
-                    d="M7.66 9.2.71 2.25 2.06.9l8.3 8.3-8.3 8.29-1.35-1.35L7.66 9.2Z" clip-rule="evenodd" />
+                  <path fill="#fff" fill-rule="evenodd" d="M5.59 7 .29 1.7 1.71.3 8.4 7l-6.7 6.7-1.42-1.4L5.6 7Z"
+                    clip-rule="evenodd" />
                 </svg>
                 <span>На любой вкус</span>
               </a>
             </li>
-            <li class="categories-item">
-              <h3 class="categories-title">Инструмент</h3>
+            <li class="categories-item popular-item categories-item-tool">
+              <h3 class="categories-title popular-title">Инструмент</h3>
               <a class="categories-link link button" href="#">
                 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="9" height="14"
                   fill="none">
-                  <path fill="#fff" fill-rule="evenodd"
-                    d="M7.66 9.2.71 2.25 2.06.9l8.3 8.3-8.3 8.29-1.35-1.35L7.66 9.2Z" clip-rule="evenodd" />
+                  <path fill="#fff" fill-rule="evenodd" d="M5.59 7 .29 1.7 1.71.3 8.4 7l-6.7 6.7-1.42-1.4L5.6 7Z"
+                    clip-rule="evenodd" />
                 </svg>
                 <span>На все случаи</span>
               </a>
             </li>
-            <li class="categories-item">
-              <h3 class="categories-title">Техника</h3>
+            <li class="categories-item popular-item categories-item-technic">
+              <h3 class="categories-title popular-title">Техника</h3>
               <a class="categories-link link button" href="#">
                 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="9" height="14"
                   fill="none">
-                  <path fill="#fff" fill-rule="evenodd"
-                    d="M7.66 9.2.71 2.25 2.06.9l8.3 8.3-8.3 8.29-1.35-1.35L7.66 9.2Z" clip-rule="evenodd" />
+                  <path fill="#fff" fill-rule="evenodd" d="M5.59 7 .29 1.7 1.71.3 8.4 7l-6.7 6.7-1.42-1.4L5.6 7Z"
+                    clip-rule="evenodd" />
                 </svg>
                 <span>Для стройки</span>
               </a>
@@ -200,90 +201,93 @@
           </ul>
         </section>
 
-        <!--СЛАЙДЕР-->
+        <div class="popular-wrapper">
 
-        <section class="slider">
-          <h2 class="visually-hidden">Популярные товары</h2>
+          <!--СЛАЙДЕР-->
 
-          <ul class="slider-list list-reset">
-            <li class="slider-item slider-item-active">
-              <div class="slider-content">
-                <h3 class="slider-title">Дрели</h3>
-                <p class="slider-description">Соседям на радость!</p>
-              </div>
-            </li>
-            <li class="slider-item">
-              <div class="slider-content">
-                <h3 class="slider-title">Перфораторы</h3>
-                <p class="slider-description">Соседям на радость!</p>
-              </div>
-            </li>
-          </ul>
+          <section class="slider">
+            <h2 class="visually-hidden">Популярные товары</h2>
 
-          <div class="slider-arrow-container">
-            <button class="slider-arrow slider-arrow-prev" type="button" aria-label="Перейти к следующему товару">
-              <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="11" height="18"
-                fill="none">
-                <path fill="#fff" fill-rule="evenodd" d="M7.66 9.2.71 2.25 2.06.9l8.3 8.3-8.3 8.29-1.35-1.35L7.66 9.2Z"
-                  clip-rule="evenodd" />
-              </svg>
-            </button>
+            <ul class="slider-list list-reset">
+              <li class="slider-item slider-drill">
+                <div class="slider-content">
+                  <h3 class="slider-title">Дрели</h3>
+                  <p class="slider-description">Соседям на радость!</p>
+                </div>
+              </li>
+              <li class="slider-item slider-peperforator slider-inactive">
+                <div class="slider-content">
+                  <h3 class="slider-title">Перфораторы</h3>
+                  <p class="slider-description">Соседям на радость!</p>
+                </div>
+              </li>
+            </ul>
 
-            <button class="slider-arrow" type="button" aria-label="Перейти к следующему товару">
-              <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="11" height="18"
-                fill="none">
-                <path fill="#fff" fill-rule="evenodd" d="M7.66 9.2.71 2.25 2.06.9l8.3 8.3-8.3 8.29-1.35-1.35L7.66 9.2Z"
-                  clip-rule="evenodd" />
-              </svg>
-            </button>
-          </div>
-
-          <a class="slider-button-open-catalog button link" href="#">Открыть каталог</a>
-
-          <div class="slider-bullets bullets">
-            <button class="slider-bullet slider-bullet-current" type="button">
-              <span class="visually-hidden">Первый слайд.</span>
-            </button>
-            <button class="slider-bullet" type="button">
-              <span class="visually-hidden">Второй слайд.</span>
-            </button>
-            <button class="slider-bullet" type="button">
-              <span class="visually-hidden">Третий слайд.</span>
-            </button>
-          </div>
-
-        </section>
-
-        <!--АКЦИИ-->
-
-        <section class="stocks">
-          <h2 class="visually-hidden">Акции</h2>
-
-          <ul class="stocks list-reset">
-            <li class="stocks-item">
-              <h3 class="stocks-title">Скидки&nbsp;50%</h3>
-              <a class="stocks-link link button" href="#">
-                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="9" height="14"
+            <div class="slider-arrow-container">
+              <button class="slider-arrow slider-arrow-prev" type="button" aria-label="Перейти к следующему товару">
+                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="11" height="18"
                   fill="none">
                   <path fill="#fff" fill-rule="evenodd"
                     d="M7.66 9.2.71 2.25 2.06.9l8.3 8.3-8.3 8.29-1.35-1.35L7.66 9.2Z" clip-rule="evenodd" />
                 </svg>
-                <span>На 350 товаров</span>
-              </a>
-            </li>
-            <li class="stocks-item">
-              <h3 class="stocks-title">Доставка</h3>
-              <a class="stocks-link link button" href="#">
-                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="9" height="14"
+              </button>
+
+              <button class="slider-arrow" type="button" aria-label="Перейти к следующему товару">
+                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="11" height="18"
                   fill="none">
                   <path fill="#fff" fill-rule="evenodd"
                     d="M7.66 9.2.71 2.25 2.06.9l8.3 8.3-8.3 8.29-1.35-1.35L7.66 9.2Z" clip-rule="evenodd" />
                 </svg>
-                <span>Бесплатно</span>
-              </a>
-            </li>
-          </ul>
-        </section>
+              </button>
+            </div>
+
+            <a class="slider-button-open-catalog button link" href="#">Открыть каталог</a>
+
+            <div class="slider-bullets bullets">
+              <button class="slider-bullet slider-bullet-current" type="button">
+                <span class="visually-hidden">Первый слайд.</span>
+              </button>
+              <button class="slider-bullet" type="button">
+                <span class="visually-hidden">Второй слайд.</span>
+              </button>
+              <button class="slider-bullet" type="button">
+                <span class="visually-hidden">Третий слайд.</span>
+              </button>
+            </div>
+
+          </section>
+
+          <!--АКЦИИ-->
+
+          <section class="stocks">
+            <h2 class="visually-hidden">Акции</h2>
+
+            <ul class="stocks list-reset">
+              <li class="stocks-item popular-item stocks-item-discounts">
+                <h3 class="stocks-title popular-title">Скидки&nbsp;50%</h3>
+                <a class="stocks-link link button" href="#">
+                  <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="9" height="14"
+                    fill="none">
+                    <path fill="#fff" fill-rule="evenodd" d="M5.59 7 .29 1.7 1.71.3 8.4 7l-6.7 6.7-1.42-1.4L5.6 7Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>На 350 товаров</span>
+                </a>
+              </li>
+              <li class="stocks-item popular-item stocks-item-delivery">
+                <h3 class="stocks-title popular-title">Доставка</h3>
+                <a class="stocks-link link button" href="#">
+                  <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="9" height="14"
+                    fill="none">
+                    <path fill="#fff" fill-rule="evenodd" d="M5.59 7 .29 1.7 1.71.3 8.4 7l-6.7 6.7-1.42-1.4L5.6 7Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Бесплатно</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
 
       </div>
 

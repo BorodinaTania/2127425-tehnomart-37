@@ -133,6 +133,15 @@ img {
 .button {
   position: relative;
   display: inline-block;
+  color: var(--basic-white);
+  text-align: center;
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 /*ГЛАВНАЯ СТРАНИЦА*/
@@ -257,4 +266,166 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 23px;
+}
+
+/*ПОПУЛЯРНОЕ*/
+
+.popular {
+  padding: 52px 0 50px;
+}
+
+.popular-item {
+  width: 370px;
+  min-height: 180px;
+  padding: 20px 25px 33px;
+}
+
+.popular-title {
+  font-family: inherit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  margin: 0;
+}
+
+/*КАТЕГОРИИ ТОВАРОВ*/
+
+.categories-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0 0 27px;
+}
+
+.categories-item-materials {
+  background-color: var(--special-ylellow);
+}
+
+.categories-item-tool {
+  background-color: var(--special-blue);
+}
+
+.categories-item-technic {
+  background-color: var(--special-lilac);
+}
+
+.popular-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.slider {
+  position: relative;
+  background-color: var(--basic-background);
+}
+
+.slider-item {
+  width: 770px;
+  height: 390px;
+}
+
+.slider-drill {
+  background-image: url("../images/slider-drill.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.slider-peperforator {
+  background-image: url("../images/slider-peperforator.jpg");
+  background-repeat: no-repeat;
+  background-position: top -30px right -100px;
+  background-size: 121%;
+}
+
+.slider-inactive {
+  display: none;
+}
+
+.slider-content {
+  position: absolute;
+  padding: 50px;
+}
+
+.slider-title {
+  font-family: "Fira Sans";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 42px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  margin: 0;
+}
+
+.slider-description {
+  font-family: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--basic-white);
+  margin: 10px 0 0;
+}
+
+.slider-arrow-container {
+  position: absolute;
+  width: 730px;
+  top: 50%;
+  left: 20px;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(41, 52, 73, 0.6);
+  border: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  /* color: var(--basic-grey-click);
+  fill: currentColor; */
+}
+
+.slider-arrow-prev {
+  transform: rotate(180deg);
+}
+
+.slider-bullets {
+  position: absolute;
+  top: 92%;
+  right: 46%;
+}
+
+.slider-button-open-catalog {
+  position: absolute;
+  top: 81%;
+  right: 72%;
+}
+
+/*АКЦИИ*/
+
+.stocks {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 29px;
+}
+
+.stocks-item-discounts {
+  background-color: var(--special-greenlight);
+}
+
+.stocks-item-delivery {
+  background-color: var(--special-ylellow);
 }
