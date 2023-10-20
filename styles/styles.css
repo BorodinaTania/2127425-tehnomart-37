@@ -123,8 +123,6 @@ img {
 
 .logo svg {
   display: block;
-  width: 220px;
-  height: 50px;
 }
 
 .logo[aria-current] {
@@ -206,6 +204,11 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.navigation-logo {
+  width: 220px;
+  height: 50px;
 }
 
 .navigation-list {
@@ -727,7 +730,7 @@ input[type='number'] {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 170px;
-  padding: 52px 0 43px;
+  padding: 52px 0 49px;
 }
 
 .about-title {
@@ -753,12 +756,136 @@ input[type='number'] {
   margin: 0 0 29px;
 }
 
+.contacts-map {
+  display: block;
+  width: 500px;
+  height: 347px;
+}
+
+.contacts-map:hover {
+  opacity: 0.7;
+}
+
 /*ПОДВАЛ*/
 
 .footer-wrapper {
   background-color: var(--basic-grey-hover);
 }
 
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  padding: 0 0 33px;
+}
+
+.footer-logo {
+  width: 220px;
+  height: 56px;
+}
+
+.footer-contacts-section {
+  padding: 15px 0 21px;
+}
+
+.footer-contacts-address {
+  font-family: inherit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #F3F7F9;
+  margin: 0;
+}
+
+.footer-contacts-phone {
+  font-family: inherit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #F3F7F9;
+  margin: 0;
+}
+
 .footer-wrapper-color {
   background-color: var(--basic-grey-click);
+}
+
+.footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-social-link {
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+
+.social-link-vsco {
+  width: 33px;
+  height: 33px;
+}
+
+.footer-mailing {
+  text-align: end;
+  padding: 16px 0 0;
+}
+
+.footer-mailing-title {
+  font-family: inherit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--basic-white);
+  margin: 0;
+}
+
+.footer-mailing-email {
+  display: block;
+  font-family: inherit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--special-yellowlight);
+  margin: 0 0 29px;
+}
+
+.footer-website {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  padding: 21px 0;
+}
+
+.footer-copyright {
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-white);
+  margin: 0;
+}
+
+.footer-htmlacademy-description {
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-white);
+  margin: 0;
+}
+
+.footer-htmlacademy-name {
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--special-yellowlight);
+  margin: 0;
 }
