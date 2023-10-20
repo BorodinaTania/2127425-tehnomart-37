@@ -314,13 +314,16 @@ img {
 }
 
 .popular-wrapper {
-  display: flex;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 29px;
 }
 
 .slider {
   position: relative;
-  background-color: var(--basic-background);
+  width: 770px;
+  height: 390px;
+  grid-column: 1 / span 2;
 }
 
 .slider-item {
