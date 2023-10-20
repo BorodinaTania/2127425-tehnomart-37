@@ -291,303 +291,326 @@
 
       </div>
 
-      <!--СТРАНИЦА КАТАЛОГА-->
+      <!--КАТАЛОГ-->
 
       <section class="catalog-products container">
         <h2 class="catalog-products-title title">Перфораторы</h2>
 
-        <!--ФИЛЬТР ТОВАРОВ-->
+        <div class="catalog-container">
 
-        <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
+          <!--ФИЛЬТР ТОВАРОВ-->
 
-          <fieldset class="filter-group">
-            <h3 class="filter-title">Цена</h3>
+          <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
 
-            <div class="filter-range-scale">
-              <div class="filter-range-bar" style="left: 0; width: 215px">
-                <button class="filter-range-toggle toggle-min" type="button">
-                  <span class="visually-hidden">Установить минимальный предел цены.</span>
-                </button>
+            <fieldset class="filter-group filter-group-price">
+              <h3 class="filter-title filter-title-price">Цена</h3>
 
-                <button class="filter-range-toggle toggle-max" type="button">
-                  <span class="visually-hidden">Установить максимальный предел цены.</span>
-                </button>
+              <div class="filter-range-scale">
+                <div class="filter-range-bar" style="left: 0; width: 220px">
+                  <button class="filter-range-toggle toggle-min" type="button">
+                    <span class="visually-hidden">Установить минимальный предел цены.</span>
+                  </button>
+
+                  <button class="filter-range-toggle toggle-max" type="button">
+                    <span class="visually-hidden">Установить максимальный предел цены.</span>
+                  </button>
+                </div>
               </div>
-            </div>
 
-            <div class="filter-price">
-              <label class="filter-price-min-label price-label">
-                <input class="filter-price-min-input input" type="number" name="price-min" value="0" min="0">
-              </label>
-              <span>-</span>
-              <label class="filter-price-max-label price-label">
-                <input class="filter-price-max-input input" type="number" name="price-max" value="30000" min="0">
-              </label>
-            </div>
-          </fieldset>
-
-          <fieldset class="filter-group">
-            <h3 class="filter-title">Производители</h3>
-            <ul class="filter-list list-reset">
-              <li class="filter-item">
-                <label class="filter-label">
-                  <input class="filter-input" type="checkbox" name="bosch" checked>
-                  <span class="filter-label-title">BOSCH</span>
+              <div class="filter-price">
+                <label class="filter-price-min-label price-label">
+                  <input class="filter-price-input filter-price-min input" type="number" name="price-min" value="0"
+                    min="0">
                 </label>
-              </li>
-              <li class="filter-item">
-                <label class="filter-label">
-                  <input class="filter-input" type="checkbox" name="interskol">
-                  <span class="filter-label-title">ИНТЕРСКОЛ</span>
+                <span class="filter-price-separator">-</span>
+                <label class="filter-price-max-label price-label">
+                  <input class="filter-price-input filter-price-max input" type="number" name="price-max" value="30000"
+                    min="0">
                 </label>
-              </li>
-              <li class="filter-item">
-                <label class="filter-label">
-                  <input class="filter-input" type="checkbox" name="makita" checked>
-                  <span class="cfilter-label-title">MAKIta</span>
-                </label>
-              </li>
-              <li class="filter-item">
-                <label class="filter-label">
-                  <input class="filter-input" type="checkbox" name="dewalt">
-                  <span class="filter-label-title">Dewalt</span>
-                </label>
-              </li>
-              <li class="filter-item">
-                <label class="filter-label">
-                  <input class="filter-input" type="checkbox" name="hitachi">
-                  <span class="filter-label-title">Hitachi</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+              </div>
+            </fieldset>
 
-          <fieldset class="filter-group">
-            <h3 class="filter-title">Питание</h3>
-            <ul class="filter-list list-reset">
-              <li class="filter-item">
-                <label class="filter-label">
-                  <input class="filter-input" type="radio" name="accumulator" checked>
-                  <span class="filter-label-title">Аккумуляторные</span>
-                </label>
-              </li>
-              <li class="filter-item">
-                <label class="filter-label">
-                  <input class="filter-input" type="radio" name="network">
-                  <span class="filter-label-title">Сетевые</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-
-          <button class="filter-button button" type="submit">Показать</button>
-        </form>
-
-        <!--КАТАЛОГ ТОВАРОВ-->
-        <div class="products-container">
-
-          <div class="sorting-control">
-            <select class="select-control" name="select-sort" aria-label="Сортировка">
-              <option value="popular">По популярности</option>
-              <option value="cheap">По возрастанию цены</option>
-              <option value="expensive">По убыванию цены</option>
-            </select>
-          </div>
-
-          <div class="product-group">
-            <ul class="product-list list-reset">
-
-              <li class="product-card-item product-card-new">
-                <div class="product-card-image">
-                  <a class="product-card-link link" href="#">
-                    <img src="images/catalog/product-1.jpg" width="216" height="180"
-                      alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
-                  </a>
-                  <button class="product-card-button button" type="button" name="buy">Купить</button>
-                  <button class="product-card-button button" type="button" name="favourites">В закладки</button>
-                </div>
-                <div class="product-card-description">
-                  <a class="product-card-link link" href="#">
-                    <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
-                  </a>
-                  <span class="old-price">22500&nbsp;₽</span>
-                  <a class="product-card-link link" href="#">
-                    <span class="price">15500&nbsp;₽</span>
-                  </a>
-                </div>
-              </li>
-              <li class="product-card-item">
-                <div class="product-card-image">
-                  <a class="product-card-link link" href="#">
-                    <img src="images/catalog/product-1.jpg" width="216" height="180"
-                      alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
-                  </a>
-                  <button class="product-card-button button" type="button" name="buy">Купить</button>
-                  <button class="product-card-button button" type="button" name="favourites">В закладки</button>
-                </div>
-                <div class="product-card-description">
-                  <a class="product-card-link link" href="#">
-                    <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
-                  </a>
-                  <span class="old-price">22500&nbsp;₽</span>
-                  <a class="product-card-link link" href="#">
-                    <span class="price">15500&nbsp;₽</span>
-                  </a>
-                </div>
-              </li>
-              <li class="product-card-item product-card-new">
-                <div class="product-card-image">
-                  <a class="product-card-link link" href="#">
-                    <img src="images/catalog/product-1.jpg" width="216" height="180"
-                      alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
-                  </a>
-                  <button class="product-card-button button" type="button" name="buy">Купить</button>
-                  <button class="product-card-button button" type="button" name="favourites">В закладки</button>
-                </div>
-                <div class="product-card-description">
-                  <a class="product-card-link link" href="#">
-                    <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
-                  </a>
-                  <span class="old-price"></span>
-                  <a class="product-card-link link" href="#">
-                    <span class="price">15500&nbsp;₽</span>
-                  </a>
-                </div>
-              </li>
-              <li class="product-card-item product-card-new">
-                <div class="product-card-image">
-                  <a class="product-card-link link" href="#">
-                    <img src="images/catalog/product-1.jpg" width="216" height="180"
-                      alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
-                  </a>
-                  <button class="product-card-button button" type="button" name="buy">Купить</button>
-                  <button class="product-card-button button" type="button" name="favourites">В закладки</button>
-                </div>
-                <div class="product-card-description">
-                  <a class="product-card-link link" href="#">
-                    <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
-                  </a>
-                  <span class="old-price"></span>
-                  <a class="product-card-link link" href="#">
-                    <span class="price">15500&nbsp;₽</span>
-                  </a>
-                </div>
-              </li>
-              <li class="product-card-item product-card-new product-card-active">
-                <div class="product-card-image">
-                  <a class="product-card-link link" href="#">
-                    <img src="images/catalog/product-1.jpg" width="216" height="180"
-                      alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
-                  </a>
-                  <button class="product-card-button button" type="button" name="buy">Купить</button>
-                  <button class="product-card-button button" type="button" name="favourites">В закладки</button>
-                </div>
-                <div class="product-card-description">
-                  <a class="product-card-link link" href="#">
-                    <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
-                  </a>
-                  <span class="old-price"></span>
-                  <a class="product-card-link link" href="#">
-                    <span class="price">15500&nbsp;₽</span>
-                  </a>
-                </div>
-              </li>
-              <li class="product-card-item product-card-new">
-                <div class="product-card-image">
-                  <a class="product-card-link link" href="#">
-                    <img src="images/catalog/product-1.jpg" width="216" height="180"
-                      alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
-                  </a>
-                  <button class="product-card-button button" type="button" name="buy">Купить</button>
-                  <button class="product-card-button button" type="button" name="favourites">В закладки</button>
-                </div>
-                <div class="product-card-description">
-                  <a class="product-card-link link" href="#">
-                    <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
-                  </a>
-                  <span class="old-price">22500&nbsp;₽</span>
-                  <a class="product-card-link link" href="#">
-                    <span class="price">15500&nbsp;₽</span>
-                  </a>
-                </div>
-              </li>
-              <li class="product-card-item product-card-new">
-                <div class="product-card-image">
-                  <a class="product-card-link link" href="#">
-                    <img src="images/catalog/product-1.jpg" width="216" height="180"
-                      alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
-                  </a>
-                  <button class="product-card-button button" type="button" name="buy">Купить</button>
-                  <button class="product-card-button button" type="button" name="favourites">В закладки</button>
-                </div>
-                <div class="product-card-description">
-                  <a class="product-card-link link" href="#">
-                    <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
-                  </a>
-                  <span class="old-price">22500&nbsp;₽</span>
-                  <a class="product-card-link link" href="#">
-                    <span class="price">15500&nbsp;₽</span>
-                  </a>
-                </div>
-              </li>
-              <li class="product-card-item">
-                <div class="product-card-image">
-                  <a class="product-card-link link" href="#">
-                    <img src="images/catalog/product-1.jpg" width="216" height="180"
-                      alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
-                  </a>
-                  <button class="product-card-button button" type="button" name="buy">Купить</button>
-                  <button class="product-card-button button" type="button" name="favourites">В закладки</button>
-                </div>
-                <div class="product-card-description">
-                  <a class="product-card-link link" href="#">
-                    <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
-                  </a>
-                  <span class="old-price">22500&nbsp;₽</span>
-                  <a class="product-card-link link" href="#">
-                    <span class="price">15500&nbsp;₽</span>
-                  </a>
-                </div>
-              </li>
-              <li class="product-card-item product-card-new">
-                <div class="product-card-image">
-                  <a class="product-card-link link" href="#">
-                    <img src="images/catalog/product-1.jpg" width="216" height="180"
-                      alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
-                  </a>
-                  <button class="product-card-button button" type="button" name="buy">Купить</button>
-                  <button class="product-card-button button" type="button" name="favourites">В закладки</button>
-                </div>
-                <div class="product-card-description">
-                  <a class="product-card-link link" href="#">
-                    <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
-                  </a>
-                  <span class="old-price"></span>
-                  <a class="product-card-link link" href="#">
-                    <span class="price">15500&nbsp;₽</span>
-                  </a>
-                </div>
-              </li>
-            </ul>
-
-            <!--ПАГИНАЦИЯ-->
-
-            <div class="pagination">
-              <ul class="pagination-list list-reset" aria-label="Страницы каталога">
-                <li class="pagination-item">
-                  <a class="pagination-link link">1</a>
+            <fieldset class="filter-group filter-group-manufacturers">
+              <h3 class="filter-title filter-title-manufacturers">Производители</h3>
+              <ul class="filter-list list-reset">
+                <li class="filter-item">
+                  <label class="filter-label">
+                    <input class="filter-input" type="checkbox" name="bosch" checked>
+                    <span class="filter-label-title">BOSCH</span>
+                  </label>
                 </li>
-                <li class="pagination-item">
-                  <a class="pagination-link link pagination-link-current" href="#" aria-current="page">2</a>
+                <li class="filter-item">
+                  <label class="filter-label">
+                    <input class="filter-input" type="checkbox" name="interskol">
+                    <span class="filter-label-title">ИНТЕРСКОЛ</span>
+                  </label>
                 </li>
-                <li class="pagination-item">
-                  <a class="pagination-link link" href="#">3</a>
+                <li class="filter-item">
+                  <label class="filter-label">
+                    <input class="filter-input" type="checkbox" name="makita" checked>
+                    <span class="cfilter-label-title">MAKIta</span>
+                  </label>
                 </li>
-                <li class="pagination-item">
-                  <a class="pagination-link link" href="#">4</a>
+                <li class="filter-item">
+                  <label class="filter-label">
+                    <input class="filter-input" type="checkbox" name="dewalt">
+                    <span class="filter-label-title">Dewalt</span>
+                  </label>
+                </li>
+                <li class="filter-item">
+                  <label class="filter-label">
+                    <input class="filter-input" type="checkbox" name="hitachi">
+                    <span class="filter-label-title">Hitachi</span>
+                  </label>
                 </li>
               </ul>
-              <a class="pagination-button link" href="#">Показать еще</a>
+            </fieldset>
+
+            <fieldset class="filter-group filter-group-nutrition">
+              <h3 class="filter-title filter-title-nutrition">Питание</h3>
+              <ul class="filter-list list-reset">
+                <li class="filter-item">
+                  <label class="filter-label">
+                    <input class="filter-input" type="radio" name="accumulator" checked>
+                    <span class="filter-label-title">Аккумуляторные</span>
+                  </label>
+                </li>
+                <li class="filter-item">
+                  <label class="filter-label">
+                    <input class="filter-input" type="radio" name="network">
+                    <span class="filter-label-title">Сетевые</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <button class="filter-button button" type="submit">Показать</button>
+          </form>
+
+          <!--КАТАЛОГ ТОВАРОВ-->
+          <div class="products-container">
+
+            <div class="sorting-control">
+              <select class="select-control" name="select-sort" aria-label="Сортировка">
+                <option value="popular">По популярности</option>
+                <option value="cheap">По возрастанию цены</option>
+                <option value="expensive">По убыванию цены</option>
+              </select>
+            </div>
+
+            <div class="product-group">
+              <ul class="product-list list-reset">
+
+                <li class="product-card-item product-card-new">
+                  <div class="product-card-image">
+                    <a class="product-card-link link" href="#">
+                      <img src="images/catalog/product-1.jpg" width="216" height="180"
+                        alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
+                    </a>
+                    <button class="product-card-button button" type="button" name="buy">Купить</button>
+                    <button class="product-card-button button" type="button" name="favourites">В закладки</button>
+                  </div>
+                  <div class="product-card-description">
+                    <a class="product-card-link link" href="#">
+                      <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
+                    </a>
+                    <div class="product-card-price">
+                      <span class="product-card-old-price">22500&nbsp;₽</span>
+                      <a class="product-card-link link" href="#">
+                        <span class="product-card-new-price">15500&nbsp;₽</span>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-card-item">
+                  <div class="product-card-image">
+                    <a class="product-card-link link" href="#">
+                      <img src="images/catalog/product-1.jpg" width="216" height="180"
+                        alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
+                    </a>
+                    <button class="product-card-button button" type="button" name="buy">Купить</button>
+                    <button class="product-card-button button" type="button" name="favourites">В закладки</button>
+                  </div>
+                  <div class="product-card-description">
+                    <a class="product-card-link link" href="#">
+                      <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
+                    </a>
+                    <div class="product-card-price">
+                      <span class="product-card-old-price">22500&nbsp;₽</span>
+                      <a class="product-card-link link" href="#">
+                        <span class="product-card-new-price">15500&nbsp;₽</span>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-card-item product-card-new">
+                  <div class="product-card-image">
+                    <a class="product-card-link link" href="#">
+                      <img src="images/catalog/product-1.jpg" width="216" height="180"
+                        alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
+                    </a>
+                    <button class="product-card-button button" type="button" name="buy">Купить</button>
+                    <button class="product-card-button button" type="button" name="favourites">В закладки</button>
+                  </div>
+                  <div class="product-card-description">
+                    <a class="product-card-link link" href="#">
+                      <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
+                    </a>
+                    <div class="product-card-price">
+                      <span class="product-card-old-price old-price-invisible">22500&nbsp;₽</span>
+                      <a class="product-card-link link" href="#">
+                        <span class="product-card-new-price">15500&nbsp;₽</span>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-card-item product-card-new">
+                  <div class="product-card-image">
+                    <a class="product-card-link link" href="#">
+                      <img src="images/catalog/product-1.jpg" width="216" height="180"
+                        alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
+                    </a>
+                    <button class="product-card-button button" type="button" name="buy">Купить</button>
+                    <button class="product-card-button button" type="button" name="favourites">В закладки</button>
+                  </div>
+                  <div class="product-card-description">
+                    <a class="product-card-link link" href="#">
+                      <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
+                    </a>
+                    <div class="product-card-price">
+                      <span class="product-card-old-price old-price-invisible">22500&nbsp;₽</span>
+                      <a class="product-card-link link" href="#">
+                        <span class="product-card-new-price">15500&nbsp;₽</span>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-card-item product-card-new product-card-active">
+                  <div class="product-card-image">
+                    <a class="product-card-link link" href="#">
+                      <img src="images/catalog/product-1.jpg" width="216" height="180"
+                        alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
+                    </a>
+                    <button class="product-card-button button" type="button" name="buy">Купить</button>
+                    <button class="product-card-button button" type="button" name="favourites">В закладки</button>
+                  </div>
+                  <div class="product-card-description">
+                    <a class="product-card-link link" href="#">
+                      <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
+                    </a>
+                    <div class="product-card-price">
+                      <span class="product-card-old-price old-price-invisible">22500&nbsp;₽</span>
+                      <a class="product-card-link link" href="#">
+                        <span class="product-card-new-price">15500&nbsp;₽</span>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-card-item product-card-new">
+                  <div class="product-card-image">
+                    <a class="product-card-link link" href="#">
+                      <img src="images/catalog/product-1.jpg" width="216" height="180"
+                        alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
+                    </a>
+                    <button class="product-card-button button" type="button" name="buy">Купить</button>
+                    <button class="product-card-button button" type="button" name="favourites">В закладки</button>
+                  </div>
+                  <div class="product-card-description">
+                    <a class="product-card-link link" href="#">
+                      <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
+                    </a>
+                    <div class="product-card-price">
+                      <span class="product-card-old-price">22500&nbsp;₽</span>
+                      <a class="product-card-link link" href="#">
+                        <span class="product-card-new-price">15500&nbsp;₽</span>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-card-item product-card-new">
+                  <div class="product-card-image">
+                    <a class="product-card-link link" href="#">
+                      <img src="images/catalog/product-1.jpg" width="216" height="180"
+                        alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
+                    </a>
+                    <button class="product-card-button button" type="button" name="buy">Купить</button>
+                    <button class="product-card-button button" type="button" name="favourites">В закладки</button>
+                  </div>
+                  <div class="product-card-description">
+                    <a class="product-card-link link" href="#">
+                      <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
+                    </a>
+                    <div class="product-card-price">
+                      <span class="product-card-old-price">22500&nbsp;₽</span>
+                      <a class="product-card-link link" href="#">
+                        <span class="product-card-new-price">15500&nbsp;₽</span>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-card-item">
+                  <div class="product-card-image">
+                    <a class="product-card-link link" href="#">
+                      <img src="images/catalog/product-1.jpg" width="216" height="180"
+                        alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
+                    </a>
+                    <button class="product-card-button button" type="button" name="buy">Купить</button>
+                    <button class="product-card-button button" type="button" name="favourites">В закладки</button>
+                  </div>
+                  <div class="product-card-description">
+                    <a class="product-card-link link" href="#">
+                      <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
+                    </a>
+                    <div class="product-card-price">
+                      <span class="product-card-old-price">22500&nbsp;₽</span>
+                      <a class="product-card-link link" href="#">
+                        <span class="product-card-new-price">15500&nbsp;₽</span>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="product-card-item product-card-new">
+                  <div class="product-card-image">
+                    <a class="product-card-link link" href="#">
+                      <img src="images/catalog/product-1.jpg" width="216" height="180"
+                        alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
+                    </a>
+                    <button class="product-card-button button" type="button" name="buy">Купить</button>
+                    <button class="product-card-button button" type="button" name="favourites">В закладки</button>
+                  </div>
+                  <div class="product-card-description">
+                    <a class="product-card-link link" href="#">
+                      <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
+                    </a>
+                    <div class="product-card-price">
+                      <span class="product-card-old-price old-price-invisible">22500&nbsp;₽</span>
+                      <a class="product-card-link link" href="#">
+                        <span class="product-card-new-price">15500&nbsp;₽</span>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+              <!--ПАГИНАЦИЯ-->
+
+              <div class="pagination">
+                <ul class="pagination-list list-reset" aria-label="Страницы каталога">
+                  <li class="pagination-item">
+                    <a class="pagination-link link">1</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link link pagination-link-current" href="#" aria-current="page">2</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link link" href="#">3</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link link" href="#">4</a>
+                  </li>
+                </ul>
+                <a class="pagination-button link" href="#">Показать еще</a>
+              </div>
             </div>
           </div>
         </div>
