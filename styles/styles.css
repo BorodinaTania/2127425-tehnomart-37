@@ -285,6 +285,7 @@ img {
   width: 370px;
   min-height: 180px;
   padding: 20px 25px 33px;
+  background-repeat: no-repeat;
 }
 
 .popular-title {
@@ -310,14 +311,35 @@ img {
 
 .categories-item-materials {
   background-color: var(--special-ylellow);
+  background-image: url("../images/materials.svg");
+  background-position: center right 44px;
 }
 
 .categories-item-tool {
   background-color: var(--special-blue);
+  background-image: url("../images/tool.svg");
+  background-position: center right 38px;
 }
 
 .categories-item-technic {
   background-color: var(--special-lilac);
+  position: relative;
+}
+
+.categories-item-technic::before {
+  content: "";
+  position: absolute;
+  top: 55px;
+  right: 38px;
+  width: 85px;
+  height: 65px;
+  background-color: var(--basic-white);
+  -webkit-mask-image: url("../images/technic.svg");
+  mask-image: url("../images/technic.svg");
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .popular-wrapper {
@@ -434,10 +456,14 @@ img {
 
 .stocks-item-discounts {
   background-color: var(--special-greenlight);
+  background-image: url("../images/discounts.svg");
+  background-position: center right 38px;
 }
 
 .stocks-item-delivery {
   background-color: var(--special-ylellow);
+  background-image: url("../images/delivery.svg");
+  background-position: center right 38px;
 }
 
 /*КАТАЛОГ*/
