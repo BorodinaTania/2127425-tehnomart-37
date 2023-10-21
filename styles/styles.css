@@ -237,25 +237,23 @@ img {
   color: var(--basic-grey-hover);
 }
 
-/* .button-filter:hover {
-  border: 2px solid var(--basic-grey);
-  color: var(--basic-grey);
+.button-filter:hover {
+  border: 2px solid var(--basic-red);
+  color: var(--basic-red);
 }
 
 .button-filter:focus,
 .button-filter:focus-visible {
-  border: 2px solid var(--basic-grey-click);
-  color: var(--basic-grey-click);
+  border: 2px solid var(--basic-grey);
+  color: var(--basic-grey);
+  opacity: 0.5;
   outline: none;
 }
 
 .button-filter:active {
-
-
-
-
-  border: 2px solid var(--basic-greylight);
-  color: var(--basic-greylight);
+  border: 2px solid var(--basic-grey);
+  color: var(--basic-grey);
+  opacity: 0.7;
 }
 
 .button-filter:disabled,
@@ -264,18 +262,48 @@ img {
   color: var(--basic-greylight);
   opacity: 0.7;
   pointer-events: none;
-} */
-
-.button-popular {
-  border-radius: 0;
-  border: 1px solid #FFF;
-  background: transparent;
 }
 
 .button-popular {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 8px;
+  align-items: center;
   border-radius: 0;
   border: 1px solid #FFF;
   background: transparent;
+  max-width: 180px;
+}
+
+.button-popular svg {
+  fill: currentColor;
+}
+
+.button-popular:hover {
+  border: 1px solid var(--basic-red);
+  color: var(--basic-red);
+}
+
+.button-popular:focus,
+.button-popular:focus-visible {
+  border: 1px solid var(--basic-white);
+  color: var(--basic-white);
+  opacity: 0.5;
+  outline: none;
+}
+
+.button-popular:active {
+  border: 1px solid var(--basic-white);
+  color: var(--basic-white);
+  opacity: 0.7;
+}
+
+.button-filter-disabled {
+  border: 1px solid var(--basic-greylight);
+  color: var(--basic-greylight);
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 .button-pagination {}
@@ -532,6 +560,16 @@ img {
   background-position: center right 38px;
 }
 
+/* Иконка серая, но при переполнении встает куда нужно
+
+.categories-item-technic {
+  background-color: var(--special-lilac);
+  background-image: url("../images/technic.svg");
+  background-position: center right 38px;
+} */
+
+/*Перекрашивает иконку в белый цвет, но при переполнении нужно менять местоположение*/
+
 .categories-item-technic {
   background-color: var(--special-lilac);
   position: relative;
@@ -540,8 +578,8 @@ img {
 .categories-item-technic::before {
   content: "";
   position: absolute;
-  top: 55px;
-  right: 38px;
+  top: 30%;
+  right: 10%;
   width: 85px;
   height: 65px;
   background-color: var(--basic-white);
@@ -618,7 +656,7 @@ img {
 .slider-arrow-container {
   position: absolute;
   width: 730px;
-  top: 50%;
+  top: 46%;
   left: 20px;
   z-index: 5;
   display: flex;
@@ -632,28 +670,101 @@ img {
   text-align: center;
   width: 50px;
   height: 50px;
+  color: var(--basic-white);
   background-color: rgba(41, 52, 73, 0.6);
-  border: transparent;
+  border: 2px solid transparent;
   border-radius: 50%;
   cursor: pointer;
-  /* color: var(--basic-grey-click);
-  fill: currentColor; */
+}
+
+.slider-arrow svg {
+  fill: currentColor;
 }
 
 .slider-arrow-prev {
   transform: rotate(180deg);
 }
 
+.slider-arrow:hover {
+  border: 2px solid var(--basic-white);
+}
+
+.slider-arrow:focus,
+.slider-arrow:focus-visible {
+  border: 2px solid var(--basic-black);
+  outline: none;
+}
+
+.slider-arrow:active {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid var(--basic-white);
+}
+
+.slider-arrow:disabled {
+  background-color: rgb(252, 252, 252, 0.3);
+  border: 2px solid var(--basic-extra-light);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .slider-bullets {
   position: absolute;
   top: 92%;
   right: 46%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 8px;
+}
+
+.slider-bullet {
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background-color: rgba(255, 209, 128, 0.8);
+  cursor: pointer;
+}
+
+.slider-bullet-current {
+  background-color: var(--basic-white);
+  pointer-events: none;
+}
+
+.slider-bullet:hover {
+  background-color: var(--special-ylellow);
+}
+
+.slider-bullet:focus,
+.slider-bullet:focus-visible {
+  background-color: var(--special-ylellow);
+  border: 1px solid var(--basic-black);
+  outline: none;
+}
+
+.slider-bullet:active {
+  background-color: var(--special-ylellow);
+  border: 1px solid var(--basic-white);
+}
+
+.slider-bullet:disabled {
+  background-color: var(--basic-greylight);
+  opacity: 0.8;
+  pointer-events: none;
 }
 
 .slider-button-open-catalog {
   position: absolute;
-  top: 81%;
-  right: 72%;
+  bottom: 41px;
+  left: 51px;
+  min-width: 195px;
+  max-width: 665px;
+  padding: 13px 13px 14px 13px;
+  border-radius: 4px;
 }
 
 /*АКЦИИ*/
@@ -874,7 +985,7 @@ input[type='number'] {
   gap: 11px;
 }
 
-/* не то перечеркивание, попробовать сделать через псевдоэлемент */
+/* Не то перечеркивание, попробовать сделать через псевдоэлемент */
 
 .product-card-old-price {
   font-family: inherit;
@@ -1118,6 +1229,15 @@ input[type='number'] {
   opacity: 0.7;
 }
 
+.contacts-map:focus,
+.contacts-map:focus-visible {
+  opacity: 1;
+}
+
+.contacts-map:active {
+  opacity: 0.5;
+}
+
 /*ПОДВАЛ*/
 
 .footer-wrapper {
@@ -1160,6 +1280,25 @@ input[type='number'] {
   line-height: 24px;
   color: #F3F7F9;
   margin: 0;
+}
+
+.footer-contacts-phone:hover {
+  color: var(--basic-red);
+}
+
+.footer-contacts-phone:focus,
+.footer-contacts-phone:focus-visible {
+  color: var(--basic-red-click);
+  outline: none;
+}
+
+.footer-contacts-phone:active {
+  color: var(--basic-red-hover);
+}
+
+.footer-contacts-phone-disabled {
+  color: #A9A9A9;
+  pointer-events: none;
 }
 
 .footer-wrapper-color {

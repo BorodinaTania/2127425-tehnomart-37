@@ -168,7 +168,7 @@
               <a class="categories-link link button button-popular" href="#">
                 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="9" height="14"
                   fill="none">
-                  <path fill="#fff" fill-rule="evenodd" d="M5.59 7 .29 1.7 1.71.3 8.4 7l-6.7 6.7-1.42-1.4L5.6 7Z"
+                  <path fill-rule="evenodd" d="M5.59 7 .29 1.7 1.71.3 8.4 7l-6.7 6.7-1.42-1.4L5.6 7Z"
                     clip-rule="evenodd" />
                 </svg>
                 <span>На любой вкус</span>
@@ -179,7 +179,7 @@
               <a class="categories-link link button button-popular" href="#">
                 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="9" height="14"
                   fill="none">
-                  <path fill="#fff" fill-rule="evenodd" d="M5.59 7 .29 1.7 1.71.3 8.4 7l-6.7 6.7-1.42-1.4L5.6 7Z"
+                  <path fill-rule="evenodd" d="M5.59 7 .29 1.7 1.71.3 8.4 7l-6.7 6.7-1.42-1.4L5.6 7Z"
                     clip-rule="evenodd" />
                 </svg>
                 <span>На все случаи</span>
@@ -190,7 +190,7 @@
               <a class="categories-link link button button-popular" href="#">
                 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="9" height="14"
                   fill="none">
-                  <path fill="#fff" fill-rule="evenodd" d="M5.59 7 .29 1.7 1.71.3 8.4 7l-6.7 6.7-1.42-1.4L5.6 7Z"
+                  <path fill-rule="evenodd" d="M5.59 7 .29 1.7 1.71.3 8.4 7l-6.7 6.7-1.42-1.4L5.6 7Z"
                     clip-rule="evenodd" />
                 </svg>
                 <span>Для стройки</span>
@@ -225,16 +225,16 @@
               <button class="slider-arrow slider-arrow-prev" type="button" aria-label="Перейти к следующему товару">
                 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="11" height="18"
                   fill="none">
-                  <path fill="#fff" fill-rule="evenodd"
-                    d="M7.66 9.2.71 2.25 2.06.9l8.3 8.3-8.3 8.29-1.35-1.35L7.66 9.2Z" clip-rule="evenodd" />
+                  <path fill-rule="evenodd" d="M7.66 9.2.71 2.25 2.06.9l8.3 8.3-8.3 8.29-1.35-1.35L7.66 9.2Z"
+                    clip-rule="evenodd" />
                 </svg>
               </button>
 
               <button class="slider-arrow" type="button" aria-label="Перейти к следующему товару">
                 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="11" height="18"
                   fill="none">
-                  <path fill="#fff" fill-rule="evenodd"
-                    d="M7.66 9.2.71 2.25 2.06.9l8.3 8.3-8.3 8.29-1.35-1.35L7.66 9.2Z" clip-rule="evenodd" />
+                  <path fill-rule="evenodd" d="M7.66 9.2.71 2.25 2.06.9l8.3 8.3-8.3 8.29-1.35-1.35L7.66 9.2Z"
+                    clip-rule="evenodd" />
                 </svg>
               </button>
             </div>
@@ -242,7 +242,7 @@
             <a class="slider-button-open-catalog button button-dark link" href="#">Открыть каталог</a>
 
             <div class="slider-bullets bullets">
-              <button class="slider-bullet slider-bullet-current" type="button">
+              <button class="slider-bullet slider-bullet-current" aria-current="page" type="button">
                 <span class="visually-hidden">Первый слайд.</span>
               </button>
               <button class="slider-bullet" type="button">
@@ -266,7 +266,7 @@
                 <a class="stocks-link link button button-popular" href="#">
                   <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="9" height="14"
                     fill="none">
-                    <path fill="#fff" fill-rule="evenodd" d="M5.59 7 .29 1.7 1.71.3 8.4 7l-6.7 6.7-1.42-1.4L5.6 7Z"
+                    <path fill-rule="evenodd" d="M5.59 7 .29 1.7 1.71.3 8.4 7l-6.7 6.7-1.42-1.4L5.6 7Z"
                       clip-rule="evenodd" />
                   </svg>
                   <span>На 350 товаров</span>
@@ -277,7 +277,7 @@
                 <a class="stocks-link link button button-popular" href="#">
                   <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="9" height="14"
                     fill="none">
-                    <path fill="#fff" fill-rule="evenodd" d="M5.59 7 .29 1.7 1.71.3 8.4 7l-6.7 6.7-1.42-1.4L5.6 7Z"
+                    <path fill-rule="evenodd" d="M5.59 7 .29 1.7 1.71.3 8.4 7l-6.7 6.7-1.42-1.4L5.6 7Z"
                       clip-rule="evenodd" />
                   </svg>
                   <span>Бесплатно</span>
@@ -622,19 +622,20 @@
               <div class="pagination">
                 <ul class="pagination-list list-reset" aria-label="Страницы каталога">
                   <li class="pagination-item">
-                    <a class="pagination-link link">1</a>
+                    <a class="pagination-link link button-pagination">1</a>
                   </li>
                   <li class="pagination-item">
-                    <a class="pagination-link link pagination-link-current" href="#" aria-current="page">2</a>
+                    <a class="pagination-link link pagination-link-current button-pagination" href="#"
+                      aria-current="page">2</a>
                   </li>
                   <li class="pagination-item">
-                    <a class="pagination-link link" href="#">3</a>
+                    <a class="pagination-link link button-pagination" href="#">3</a>
                   </li>
                   <li class="pagination-item">
-                    <a class="pagination-link link" href="#">4</a>
+                    <a class="pagination-link link button-pagination" href="#">4</a>
                   </li>
                 </ul>
-                <a class="pagination-button link button button-dark" href="#">Показать еще</a>
+                <a class="pagination-button-more link button button-dark" href="#">Показать еще</a>
               </div>
             </div>
           </div>
