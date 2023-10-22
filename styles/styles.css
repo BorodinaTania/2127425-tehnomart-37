@@ -528,6 +528,14 @@ img {
   background-color: var(--basic-grey);
 }
 
+/* Увеличиваем размеры контейнера, чтобы меню выглядело единообразно */
+
+.container-menu {
+  width: 100%;
+  max-width: 1216px;
+  margin: 0 auto;
+}
+
 .navigation-container-user {
   display: flex;
   flex-wrap: wrap;
@@ -552,9 +560,11 @@ img {
   padding: 19px 23px 27px;
 }
 
+/* Чтобы меню осталось на месте при сохранении размеров контейнера
+
 .navigation-link-main {
   padding-left: 0;
-}
+} */
 
 .navigation-link:hover {
   background-color: var(--basic-grey-hover);
