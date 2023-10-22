@@ -618,6 +618,7 @@ img {
   justify-content: space-between;
   align-items: center;
   gap: 23px;
+  margin-right: 23px;
 }
 
 .navigation-user-link {
@@ -800,7 +801,7 @@ img {
   font-weight: 700;
   line-height: 24px;
   color: var(--basic-white);
-  margin: 10px 0 0;
+  margin: 11px 0 0;
 }
 
 .slider-arrow-container {
@@ -967,15 +968,15 @@ img {
 }
 
 .filter-group-price {
-  margin: 0 0 40px;
+  padding: 0 0 40px;
 }
 
 .filter-group-manufacturers {
-  padding: 0 0 45px;
+  padding: 0 0 41px;
 }
 
 .filter-group-nutrition {
-  padding: 0 0 45px;
+  padding: 0 0 42px;
 }
 
 .filter-title {
@@ -988,9 +989,63 @@ img {
   margin: 0;
 }
 
-.filter-range-scale {
+.filter-title-price {
+  margin-bottom: 8px;
+}
+
+.filter-title-manufacturers {
+  margin-bottom: 12px;
+}
+
+.filter-title-nutrition {
+  margin: 0 0 14px 5px;
+}
+
+.filter-range {
+  width: 220px;
+  height: 40px;
+  padding: 9px 5px 10px 10px;
   background-color: #F7F3EC;
   margin: 0 0 7px;
+}
+
+.filter-range-scale {
+  position: relative;
+  top: 50%;
+  left: 51%;
+  width: 172px;
+  height: 2px;
+  background-color: var(--basic-grey);
+  transform: translate(-50%, -50%);
+}
+
+.filter-range-bar {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  height: 2px;
+  background-color: var(--basic-green-hover);
+  transform: translateY(-50%);
+}
+
+.filter-range-toggle {
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background-color: var(--basic-white);
+  border: 2px solid var(--basic-grey);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  cursor: url("../images/cursor.svg"), auto;
+}
+
+.toggle-max {
+  left: 62px;
 }
 
 .filter-price-input {
@@ -1000,6 +1055,12 @@ img {
   background-color: #F7F3EC;
   border: transparent;
   text-align: center;
+  color: var(--basic-grey-click);
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -1011,29 +1072,108 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
+.filter-price-max {
+  padding-left: 5px;
+}
+
+.filter-item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.filter-item-radio {
+  margin-left: 4px;
+}
+
+.filter-item-radio:not(:last-child) {
+  margin-bottom: 11px;
+}
+
+.filter-label {
+  display: block;
+  cursor: url("../images/cursor.svg"), auto;
+  position: relative;
+}
+
 .filter-label-title {
   font-family: inherit;
-  font-size: 14px;
+  font-size: 12.5px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
   color: var(--basic-black);
+  margin: 0 0 0 11px;
 }
 
-.filter-title-price {
-  margin-bottom: 8px;
+.filter-label:hover {
+  opacity: 1;
 }
 
-.filter-title-manufacturers {
-  margin-bottom: 16px;
+.filter-label:active {
+  opacity: 0.8;
 }
 
-.filter-title-nutrition {
-  margin-bottom: 18px;
+.filter-label:disabled {
+  opacity: 0.4;
 }
 
-.filter-item:not(:last-child) {
-  margin-bottom: 19px;
+.filter-input {
+  position: relative;
+  top: 4px;
+  width: 21px;
+  height: 21px;
+  margin: 0;
+  appearance: none;
+  background-color: transparent;
+  background-size: 0;
+  border: 2px solid var(--basic-grey-hover);
+  border-radius: 2px;
+  cursor: url("../images/cursor.svg"), auto;
+}
+
+.filter-input-radio {
+  width: 22px;
+  height: 22px;
+}
+
+.filter-input:hover {
+  opacity: 0.6;
+}
+
+.filter-input:focus,
+.filter-input:focus-visible {
+  outline: none;
+}
+
+.filter-input:active {
+  opacity: 0.4;
+}
+
+.filter-input:disabled {
+  opacity: 0.2;
+}
+
+.filter-input[type="checkbox"]:checked {
+  background-image: url("../images/checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center right 3px;
+  background-size: 9.41px 7.12px;
+}
+
+.filter-input[type="radio"] {
+  border-radius: 50%;
+}
+
+.filter-input[type="radio"]:checked {
+  background-image: url("../images/radio.svg");
+  background-repeat: no-repeat;
+  background-position: top 4px left 5px;
+  background-size: 9px 9px;
+}
+
+.filter-button {
+  min-width: 220px;
+  min-height: 40px;
+  padding: 11px 9px 9px 11px;
 }
 
 /*КАТАЛОГ ТОВАРОВ*/
@@ -1091,7 +1231,7 @@ input[type='number'] {
 .product-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px 32px;
+  gap: 31px 33px;
   align-items: center;
   text-align: center;
 }
@@ -1181,8 +1321,6 @@ input[type='number'] {
   gap: 11px;
 }
 
-/* Не то перечеркивание, попробовать сделать через псевдоэлемент */
-
 .product-card-old-price {
   font-family: inherit;
   font-size: 14px;
@@ -1190,10 +1328,21 @@ input[type='number'] {
   font-weight: 700;
   line-height: 18px;
   letter-spacing: 2px;
-  text-decoration: line-through;
   text-transform: uppercase;
   color: #A9A9A9;
   margin-left: 77px;
+  position: relative;
+}
+
+.product-card-old-price::after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 60px;
+  height: 1px;
+  background-color: #A9A9A9;
+  transform: translate(-50%, -50%);
 }
 
 .old-price-invisible {

@@ -310,15 +310,17 @@
             <fieldset class="filter-group filter-group-price">
               <h3 class="filter-title filter-title-price">Цена</h3>
 
-              <div class="filter-range-scale">
-                <div class="filter-range-bar" style="left: 0; width: 220px">
-                  <button class="filter-range-toggle toggle-min" type="button">
-                    <span class="visually-hidden">Установить минимальный предел цены.</span>
-                  </button>
+              <div class="filter-range">
+                <div class="filter-range-scale">
+                  <div class="filter-range-bar" style="left: 0; width: 75px">
+                    <button class="filter-range-toggle toggle-min" type="button">
+                      <span class="visually-hidden">Установить минимальный предел цены.</span>
+                    </button>
 
-                  <button class="filter-range-toggle toggle-max" type="button">
-                    <span class="visually-hidden">Установить максимальный предел цены.</span>
-                  </button>
+                    <button class="filter-range-toggle toggle-max" type="button">
+                      <span class="visually-hidden">Установить максимальный предел цены.</span>
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -353,7 +355,7 @@
                 <li class="filter-item">
                   <label class="filter-label">
                     <input class="filter-input" type="checkbox" name="makita" checked>
-                    <span class="cfilter-label-title">MAKIta</span>
+                    <span class="filter-label-title">MAKita</span>
                   </label>
                 </li>
                 <li class="filter-item">
@@ -374,15 +376,16 @@
             <fieldset class="filter-group filter-group-nutrition">
               <h3 class="filter-title filter-title-nutrition">Питание</h3>
               <ul class="filter-list list-reset">
-                <li class="filter-item">
+                <li class="filter-item filter-item-radio">
                   <label class="filter-label">
-                    <input class="filter-input" type="radio" name="accumulator" checked>
+                    <input class="filter-input filter-input-radio" type="radio" name="nutrition" value="accumulator"
+                      checked>
                     <span class="filter-label-title">Аккумуляторные</span>
                   </label>
                 </li>
-                <li class="filter-item">
+                <li class="filter-item filter-item-radio">
                   <label class="filter-label">
-                    <input class="filter-input" type="radio" name="network">
+                    <input class="filter-input filter-input-radio" type="radio" name="nutrition" value="network">
                     <span class="filter-label-title">Сетевые</span>
                   </label>
                 </li>
