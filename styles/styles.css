@@ -113,7 +113,7 @@ body {
 .link {
   text-decoration: none;
   color: var(--basic-grey-click);
-  cursor: pointer;
+  cursor: url("../images/cursor.svg"), auto;
 }
 
 img {
@@ -130,7 +130,7 @@ img {
   pointer-events: none;
 }
 
-/*КНОПКИ И ИНПУТЫ*/
+/*КНОПКИ*/
 
 .button {
   position: relative;
@@ -147,7 +147,7 @@ img {
   border-radius: 2px;
   border: transparent;
   padding: 10px;
-  cursor: pointer;
+  cursor: url("../images/cursor.svg"), auto;
   transition: background-color 0.2s ease-in;
 }
 
@@ -306,7 +306,53 @@ img {
   pointer-events: none;
 }
 
-.button-pagination {}
+/*ИНПУТЫ*/
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 14px 12px;
+  font-family: var(--font-inter);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-greylight);
+  border-radius: 2px;
+}
+
+.form-input::placeholder {
+  color: #CCCCCC;
+}
+
+.form-input:hover {
+  border: 1px solid var(--basic-green);
+}
+
+.form-input:focus,
+.form-input:focus-visible {
+  border: 1px solid var(--basic-green);
+  box-shadow: 0 0 0 1px var(--special-ylellow);
+  outline: none;
+}
+
+.form-input-error {
+  border: 1px solid var(--basic-red);
+}
+
+.form-input-error:hover {
+  border: 1px solid var(--basic-red);
+  box-shadow: 0 0 0 1px var(--basic-red);
+}
+
+.form-input:disabled {
+  border: 1px solid var(--basic-extra-light);
+  background-color: var(--basic-background);
+  color: #808080;
+  pointer-events: none;
+}
 
 /*ГЛАВНАЯ СТРАНИЦА*/
 /*ШАПКА*/
@@ -321,7 +367,7 @@ img {
   justify-content: space-between;
   align-items: center;
   gap: 31px;
-  padding: 11px 0 13px;
+  padding: 13px 0 13px;
 }
 
 .header-title {
@@ -392,11 +438,40 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .navigation-logo {
+  position: absolute;
+  top: 0;
   width: 220px;
   height: 50px;
+}
+
+.navigation-search-label {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  margin: 0 0 0 220px;
+}
+
+.navigation-search-label svg {
+  fill: currentColor;
+  color: rgb(255, 255, 255, 0.3);
+  margin: 0 0 0 21px;
+}
+
+.navigation-search-input {
+  width: 680px;
+  height: 45px;
+  background-color: var(--basic-grey-click);
+  border: 1px solid transparent;
+  padding: 14px 14px 10px 10px;
+}
+
+.navigation-login-wrapper {
+  margin: auto 0;
 }
 
 .navigation-login-list {
@@ -450,7 +525,7 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0 18px;
+  padding: 14px 0 18px;
 }
 
 .navigation-list {
@@ -674,7 +749,7 @@ img {
   background-color: rgba(41, 52, 73, 0.6);
   border: 2px solid transparent;
   border-radius: 50%;
-  cursor: pointer;
+  cursor: url("../images/cursor.svg"), auto;
 }
 
 .slider-arrow svg {
@@ -709,8 +784,8 @@ img {
 
 .slider-bullets {
   position: absolute;
-  top: 92%;
-  right: 46%;
+  top: 94%;
+  right: 47.5%;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -727,7 +802,7 @@ img {
   border-radius: 50%;
   border: 1px solid transparent;
   background-color: rgba(255, 209, 128, 0.8);
-  cursor: pointer;
+  cursor: url("../images/cursor.svg"), auto;
 }
 
 .slider-bullet-current {
@@ -888,14 +963,60 @@ input[type='number'] {
 
 /*КАТАЛОГ ТОВАРОВ*/
 
-.products-container {
+.product-container {
   padding: 32px 0 0;
+}
+
+.product-sorting-container {
+  padding: 0 0 31px 5px;
+}
+
+.product-sorting {
+  width: 280px;
+  min-height: 40px;
+  padding: 8px 14px 6px;
+  font-family: var(--font-inter);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--basic-grey);
+  background-color: var(--basic-white);
+  background-image: url("../images/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: center right 12px;
+  background-size: 10px 7px;
+  border: 1px solid var(--basic-grey);
+  border-radius: 2px;
+  cursor: url("../images/cursor.svg"), auto;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.product-sorting:hover {
+  border: 1px solid var(--basic-green);
+}
+
+.product-sorting:focus,
+.product-sorting:focus-visible {
+  border: 1px solid var(--basic-green);
+  box-shadow: 0 0 0 1px var(--special-ylellow);
+  background-image: url("../images/arrow-down-green.svg");
+  background-repeat: no-repeat;
+  background-position: center right 12px;
+  background-size: 10px 7px;
+  outline: none;
+}
+
+.product-sorting:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .product-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 29px 32px;
+  gap: 30px 32px;
   align-items: center;
   text-align: center;
 }
@@ -1077,9 +1198,41 @@ input[type='number'] {
   font-style: normal;
   font-weight: 700;
   line-height: 16px;
+  border-radius: 2px;
   background-color: var(--basic-grey);
-  border: 1px solid transparent;
   color: var(--basic-white);
+}
+
+.pagination-link:hover {
+  background-color: var(--basic-grey-hover);
+}
+
+.pagination-link:focus,
+.pagination-link:focus-visible {
+  background-color: var(--basic-grey-click);
+  outline: none;
+}
+
+.pagination-link:active {
+  background-color: var(--basic-grey);
+  opacity: 0.8;
+}
+
+.pagination-link-current {
+  background-color: var(--basic-white);
+  color: var(--basic-grey);
+  pointer-events: none;
+}
+
+.pagination-link-disabled {
+  background-color: #A9A9A9;
+  pointer-events: none;
+}
+
+.pagination-button-more {
+  min-width: 195px;
+  min-height: 45px;
+  padding: 14px 13px 13px;
 }
 
 /*СЕРВИСЫ*/
@@ -1094,14 +1247,14 @@ input[type='number'] {
 }
 
 .service-description {
-  color: inherit;
-  text-align: center;
   font-family: inherit;
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
   margin: 0 0 64px;
+  color: inherit;
+  text-align: center;
 }
 
 .service-list {
@@ -1197,7 +1350,7 @@ input[type='number'] {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 170px;
-  padding: 52px 0 49px;
+  padding: 52px 0 51px;
 }
 
 .about-title {
@@ -1223,6 +1376,7 @@ input[type='number'] {
   display: block;
   width: 500px;
   height: 347px;
+  cursor: url("../images/cursor.svg"), auto;
 }
 
 .contacts-map:hover {
@@ -1269,7 +1423,7 @@ input[type='number'] {
   font-weight: 400;
   line-height: 24px;
   color: #F3F7F9;
-  margin: 0;
+  margin: 7px 0 0;
 }
 
 .footer-contacts-phone {
@@ -1317,6 +1471,7 @@ input[type='number'] {
   display: block;
   width: 36px;
   height: 36px;
+  cursor: url("../images/cursor.svg"), auto;
 }
 
 .social-link-vsco {
@@ -1337,6 +1492,10 @@ input[type='number'] {
   line-height: 24px;
   color: var(--basic-white);
   margin: 0;
+}
+
+.mailing-title-offers {
+  margin: 0 0 2px;
 }
 
 .footer-mailing-email {

@@ -40,7 +40,13 @@
 
               <form class="navigation-search" action="https://echo.htmlacademy.ru" method="get">
                 <label class="navigation-search-label">
-                  <input class="navigation-search-input" type="text" name="text" placeholder="Поиск:">
+                  <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    fill="none">
+                    <path fill-rule="evenodd"
+                      d="M8 16a8 8 0 1 1 6.32-3.1l5.39 5.4-1.42 1.4-5.38-5.38A7.97 7.97 0 0 1 8 16Zm6-8A6 6 0 1 1 2 8a6 6 0 0 1 12 0Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <input class="navigation-search-input form-input" type="text" name="text" placeholder="Поиск:">
                   <span class="visually-hidden">Введите название товара</span>
                 </label>
               </form>
@@ -387,10 +393,10 @@
           </form>
 
           <!--КАТАЛОГ ТОВАРОВ-->
-          <div class="products-container">
+          <div class="product-container">
 
-            <div class="sorting-control">
-              <select class="select-control" name="select-sort" aria-label="Сортировка">
+            <div class="product-sorting-container">
+              <select class="product-sorting" name="select-sort" aria-label="Сортировка">
                 <option value="popular">По популярности</option>
                 <option value="cheap">По возрастанию цены</option>
                 <option value="expensive">По убыванию цены</option>
@@ -623,17 +629,17 @@
               <div class="pagination">
                 <ul class="pagination-list list-reset" aria-label="Страницы каталога">
                   <li class="pagination-item">
-                    <a class="pagination-link link button-pagination">1</a>
+                    <a class="pagination-link link" href="#">1</a>
                   </li>
                   <li class="pagination-item">
-                    <a class="pagination-link link pagination-link-current button-pagination" href="#"
-                      aria-current="page">2</a>
+                    <a class="pagination-link link pagination-link-current" href="#" aria-current="page"
+                      tabindex="-1">2</a>
                   </li>
                   <li class="pagination-item">
-                    <a class="pagination-link link button-pagination" href="#">3</a>
+                    <a class="pagination-link link" href="#">3</a>
                   </li>
                   <li class="pagination-item">
-                    <a class="pagination-link link button-pagination" href="#">4</a>
+                    <a class="pagination-link link" href="#">4</a>
                   </li>
                 </ul>
                 <a class="pagination-button-more link button button-dark" href="#">Показать еще</a>
@@ -648,7 +654,7 @@
       <section class="service">
         <div class="service-container container">
           <h2 class="service-title title">Сервисы</h2>
-          <p class="service-description">Хороший интернет-магазин отличается от плохого не только ценами! <br>Мs
+          <p class="service-description">Хороший интернет-магазин отличается от плохого не только ценами! <br>Мы
             стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
 
           <ul class="service-list list-reset">
@@ -765,11 +771,11 @@
             <h3 class="footer-mailing-title">Обратная связь:</h3>
             <a class="footer-mailing-email link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
 
-            <h3 class="footer-mailing-title">Получайте лучшие предложения</h3>
+            <h3 class="footer-mailing-title mailing-title-offers">Получайте лучшие предложения</h3>
             <form class="footer-mailing-form" action="https://echo.htmlacademy.ru" method="post">
               <label class="footer-mailing-form-label">
-                <input class="mailing-form-input" type="email" name="subscribe" placeholder="email@example.com"
-                  required>
+                <input class="mailing-form-input form-input" type="email" name="subscribe"
+                  placeholder="email@example.com" required>
               </label>
               <button class="footer-mailing-form-button button button-buy" type="submit">
                 <span class="visually-hidden">Отправить</span>
