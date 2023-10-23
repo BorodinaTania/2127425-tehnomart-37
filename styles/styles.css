@@ -1257,10 +1257,26 @@ input[type='number'] {
 .product-card-image {
   display: block;
   position: relative;
+  width: 100%;
+  height: 180px;
 }
 
 .product-card-image-button {
   display: none;
+}
+
+.product-card-button-buy {
+  min-width: 135px;
+  background-image: url("../images/basket-min.svg");
+  background-repeat: no-repeat;
+  background-position: center left 25px;
+  background-size: 14px 14px;
+  padding: 11px 11px 11px 33px;
+}
+
+.product-card-button-favourites {
+  min-width: 135px;
+  padding: 9px 10px 9px 13px;
 }
 
 .product-card-image:hover .product-card-image-button,
@@ -1268,16 +1284,15 @@ input[type='number'] {
 .product-card-active .product-card-image-button {
   content: "";
   position: absolute;
-  top: 9px;
-  right: 5px;
+  top: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   gap: 11px;
   background-color: rgba(255, 255, 255, 0.90);
-  padding: 27px 40px 62px 41px;
+  padding: 35px 45px 54px 36px;
 }
 
 .product-card-link-image:focus,
@@ -1293,7 +1308,7 @@ input[type='number'] {
   font-weight: 700;
   line-height: 26px;
   color: var(--basic-grey-click);
-  margin: 7px 0 14px;
+  margin: 14px 0 14px;
 }
 
 .product-card-link-title:focus,
