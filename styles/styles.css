@@ -1280,6 +1280,41 @@ img {
   border-radius: 50%;
   transform: translateY(-50%);
   cursor: url("../images/cursor.svg"), auto;
+  transition: background-color 0.2s ease-in;
+}
+
+.filter-range-toggle:hover {
+  background-color: var(--basic-green-click);
+  border: 2px solid var(--basic-grey);
+}
+
+.filter-range-toggle:focus-visible {
+  outline: none;
+  position: relative;
+}
+
+.filter-range-toggle:focus-visible::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  outline: 2px solid var(--basic-red);
+  outline-offset: 4px;
+}
+
+.filter-range-toggle:active {
+  background-color: var(--basic-green-hover);
+  border: 2px solid var(--basic-grey);
+}
+
+.filter-range-toggle:disabled {
+  background-color: var(--basic-neutral);
+  border: 2px solid transparent;
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 .toggle-max {
@@ -1291,7 +1326,7 @@ img {
   height: 40px;
   margin: 0;
   background-color: #F7F3EC;
-  border: transparent;
+  border: 2px solid transparent;
   text-align: center;
   color: var(--basic-grey-click);
   font-family: var(--font-inter);
@@ -1299,6 +1334,28 @@ img {
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
+}
+
+.filter-price-input:hover {
+  border: 2px solid var(--basic-grey);
+  border-radius: 2px;
+}
+
+.filter-price-input:focus-visible {
+  border: 2px solid var(--basic-red);
+  outline: none;
+}
+
+.filter-price-input:active {
+  border: 2px solid rgba(61, 84, 111, 0.8);
+  border-radius: 2px;
+}
+
+.filter-price-input:disabled {
+  background-color: var(--basic-neutral);
+  border: 2px solid transparent;
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -1362,7 +1419,6 @@ input[type='number'] {
   margin: 0;
   appearance: none;
   background-color: transparent;
-  background-size: 0;
   border: 2px solid var(--basic-grey-hover);
   border-radius: 2px;
   cursor: url("../images/cursor.svg"), auto;
@@ -1389,6 +1445,10 @@ input[type='number'] {
   height: 100%;
   outline: 2px solid var(--basic-red);
   outline-offset: 4px;
+}
+
+.filter-input[type="radio"]:focus-visible::before {
+  border-radius: 50%;
 }
 
 .filter-input:active {
@@ -1876,8 +1936,17 @@ input[type='number'] {
   opacity: 0.7;
 }
 
-.contacts-map:focus,
 .contacts-map:focus-visible {
+  outline: none;
+  position: relative;
+}
+
+.contacts-map:focus-visible::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  outline: 2px solid var(--basic-grey);
   opacity: 1;
 }
 
