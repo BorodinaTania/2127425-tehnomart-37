@@ -240,14 +240,13 @@ img {
 
 .button-filter:hover {
   border: 2px solid var(--basic-red);
-  color: var(--basic-red);
+  color: var(--basic-grey);
 }
 
 .button-filter:focus,
 .button-filter:focus-visible {
-  border: 2px solid var(--basic-grey);
-  color: var(--basic-grey);
-  opacity: 0.5;
+  border: 2px solid var(--basic-red);
+  color: var(--basic-red);
   outline: none;
 }
 
@@ -484,13 +483,17 @@ img {
   flex-wrap: wrap;
   justify-content: end;
   align-items: center;
-  gap: 15px;
-  padding: 0;
+  gap: 16px;
+  padding: 0 5px 0 0;
   position: relative;
 }
 
 .navigation-login-item {
   display: block;
+}
+
+.navigation-login-item-exit svg {
+  transform: rotate(180deg);
 }
 
 .navigation-login-link {
@@ -515,15 +518,6 @@ img {
   line-height: 18px;
   letter-spacing: 2px;
   text-transform: uppercase;
-}
-
-.navigation-user {
-  color: var(--basic-background);
-  font-family: inherit;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
 }
 
 .dropdown {
@@ -609,9 +603,18 @@ img {
   opacity: 0.6;
 }
 
-.dropdown-remember-input:focus,
 .dropdown-remember-input:focus-visible {
   outline: none;
+  position: relative;
+}
+
+.dropdown-remember-input:focus-visible::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  outline: 2px solid var(--basic-red);
+  outline-offset: 4px;
 }
 
 .dropdown-remember-input:active {
@@ -822,23 +825,48 @@ img {
   letter-spacing: 0.2px;
 }
 
+.navigation-user {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14.5px;
+  padding: 0 26px 0 0;
+}
+
+.navigation-user-login {
+  gap: 17px;
+}
+
 .navigation-user-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 23px;
-  margin-right: 23px;
 }
 
 .navigation-user-link {
   display: flex;
   gap: 6px;
   align-items: center;
+  padding: 21px 11.5px 30px 11.5px;
 }
 
-.user-link-favourites {
+.navigation-user-link-favourites {
   gap: 8px;
+}
+
+.navigation-user-link-basket svg {
+  opacity: 0.6;
+}
+
+.navigation-user-name {
+  color: var(--basic-background);
+  font-family: inherit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .navigation-user-favourites-number,
@@ -858,7 +886,7 @@ img {
   min-height: 42px;
   border-radius: 4px;
   padding: 12px;
-  margin-right: 3px;
+  margin: 11px 0 17px;
 }
 
 /*ПОПУЛЯРНОЕ*/
@@ -1349,9 +1377,18 @@ input[type='number'] {
   opacity: 0.6;
 }
 
-.filter-input:focus,
 .filter-input:focus-visible {
   outline: none;
+  position: relative;
+}
+
+.filter-input:focus-visible::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  outline: 2px solid var(--basic-red);
+  outline-offset: 4px;
 }
 
 .filter-input:active {
