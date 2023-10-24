@@ -20,7 +20,8 @@
           <h1 class="header-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
           <address class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
           <a class="header-phone link" href="tel:+7812555-05-55">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+              fill="none">
               <path fill-rule="evenodd"
                 d="M7.09 5.07c.414-.558.562-1.147.093-1.667C6.132 1.931 5.424 1.021 4.98.583 4.137-.251 2.75-.138 2.018.582c-.392.387-.525.52-.928.929-2.245 2.245-.876 6.993 2.763 10.635 3.638 3.642 8.385 5.011 10.634 2.76.372-.358.687-.673.935-.935.716-.757.825-2.083-.005-2.945-.425-.442-1.293-1.115-2.827-2.213-.47-.42-1.027-.329-1.537.006-.246.162-.425.325-.762.662l-.613.614c-.081.08-1.177-.468-2.242-1.534C6.372 7.495 5.823 6.4 5.903 6.32l.614-.614c.107-.107.158-.16.224-.228.137-.144.25-.274.348-.407Zm3.719 6.156.613-.613c.185-.186.306-.3.404-.38 1.343.966 2.122 1.572 2.44 1.903.19.198.16.56-.005.735-.23.243-.528.541-.894.894-1.455 1.455-5.286.35-8.383-2.75-3.098-3.1-4.203-6.933-2.76-8.377.402-.408.53-.535.916-.916.145-.143.54-.175.717 0 .341.337.975 1.148 1.907 2.447a3.38 3.38 0 0 1-.181.205l-.197.2-.613.613C3.73 6.23 4.618 8.004 6.305 9.693c1.686 1.687 3.461 2.576 4.504 1.533ZM9.328.056a7.604 7.604 0 0 1 6.62 6.62l-1.58.263a6.002 6.002 0 0 0-5.303-5.303l.263-1.58ZM8.8 3.218a4.401 4.401 0 0 1 3.985 3.985l-1.585.264a2.8 2.8 0 0 0-2.664-2.664L8.8 3.218Z"
                 clip-rule="evenodd" />
@@ -40,7 +41,7 @@
 
               <form class="navigation-search" action="https://echo.htmlacademy.ru" method="get">
                 <label class="navigation-search-label">
-                  <input class="navigation-search-input form-input" type="text" name="text" placeholder="Поиск:">
+                  <input class="navigation-search-input form-input" type="search" name="search" placeholder="Поиск:">
                   <span class="visually-hidden">Введите название товара</span>
                 </label>
               </form>
@@ -63,7 +64,7 @@
 
                   <form class="dropdown-form" action="https://echo.htmlacademy.ru" method="post">
                     <label class="visually-hidden" for="text">Введите ваш логин</label>
-                    <input class="dropdown-input form-input" type="text" name="text" id="text" placeholder="Логин"
+                    <input class="dropdown-input form-input" type="text" name="user" id="text" placeholder="Логин"
                       required>
 
                     <label class="visually-hidden" for="password">Введите ваш пароль</label>
@@ -71,8 +72,9 @@
                       placeholder="Пароль" required>
 
                     <div class="dropdown-wrapper">
-                      <label class="dropdown-remember">
-                        <input class="dropdown-remember-input" type="checkbox" name="remember-me" checked>
+                      <label class="dropdown-remember" for="remember-me">
+                        <input class="dropdown-remember-input" type="checkbox" name="remember-me" for="remember-me"
+                          checked>
                         <span class="dropdown-remember-label">Запомнить меня</span>
                       </label>
                       <a class="dropdown-link link" href="#">Забыл пароль</a>
@@ -321,14 +323,14 @@
               </div>
 
               <div class="filter-price">
-                <label class="filter-price-min-label price-label">
-                  <input class="filter-price-input filter-price-min input" type="number" name="price-min" value="0"
-                    min="0">
+                <label class="filter-price-min-label price-label" for="range-min">
+                  <input class="filter-price-input filter-price-min input" id="range-min" type="number" name="price-min"
+                    value="0" min="0">
                 </label>
                 <span class="filter-price-separator">-</span>
-                <label class="filter-price-max-label price-label">
-                  <input class="filter-price-input filter-price-max input" type="number" name="price-max" value="30000"
-                    min="0">
+                <label class="filter-price-max-label price-label" for="range-max">
+                  <input class="filter-price-input filter-price-max input" id="range-max" type="number" name="price-max"
+                    value="30000" min="0">
                 </label>
               </div>
             </fieldset>
@@ -409,7 +411,7 @@
                   <div class="product-card-image">
                     <a class="product-card-link product-card-link-image link" href="#">
                       <img src="images/catalog/product-1.jpg" width="216" height="180"
-                        alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
+                        alt="Перфоратор черно-синего цвета.">
                     </a>
                     <div class="product-card-image-button">
                       <button class="product-card-button-buy button button-buy" type="button" name="buy">Купить</button>
@@ -434,7 +436,7 @@
                   <div class="product-card-image">
                     <a class="product-card-link product-card-link-image link" href="#">
                       <img src="images/catalog/product-1.jpg" width="216" height="180"
-                        alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
+                        alt="Перфоратор черно-синего цвета.">
                     </a>
                     <div class="product-card-image-button">
                       <button class="product-card-button-buy button button-buy" type="button" name="buy">Купить</button>
@@ -459,7 +461,7 @@
                   <div class="product-card-image">
                     <a class="product-card-link product-card-link-image link" href="#">
                       <img src="images/catalog/product-1.jpg" width="216" height="180"
-                        alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
+                        alt="Перфоратор черно-синего цвета.">
                     </a>
                     <div class="product-card-image-button">
                       <button class="product-card-button-buy button button-buy" type="button" name="buy">Купить</button>
@@ -484,7 +486,7 @@
                   <div class="product-card-image">
                     <a class="product-card-link product-card-link-image link" href="#">
                       <img src="images/catalog/product-1.jpg" width="216" height="180"
-                        alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
+                        alt="Перфоратор черно-синего цвета.">
                     </a>
                     <div class="product-card-image-button">
                       <button class="product-card-button-buy button button-buy" type="button" name="buy">Купить</button>
@@ -509,7 +511,7 @@
                   <div class="product-card-image">
                     <a class="product-card-link product-card-link-image link" href="#" tabindex="-1">
                       <img src="images/catalog/product-1.jpg" width="216" height="180"
-                        alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
+                        alt="Перфоратор черно-синего цвета.">
                     </a>
                     <div class="product-card-image-button">
                       <button class="product-card-button-buy button button-buy" type="button" name="buy">Купить</button>
@@ -534,7 +536,7 @@
                   <div class="product-card-image">
                     <a class="product-card-link product-card-link-image link" href="#">
                       <img src="images/catalog/product-1.jpg" width="216" height="180"
-                        alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
+                        alt="Перфоратор черно-синего цвета.">
                     </a>
                     <div class="product-card-image-button">
                       <button class="product-card-button-buy button button-buy" type="button" name="buy">Купить</button>
@@ -559,7 +561,7 @@
                   <div class="product-card-image">
                     <a class="product-card-link product-card-link-image link" href="#">
                       <img src="images/catalog/product-1.jpg" width="216" height="180"
-                        alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
+                        alt="Перфоратор черно-синего цвета.">
                     </a>
                     <div class="product-card-image-button">
                       <button class="product-card-button-buy button button-buy" type="button" name="buy">Купить</button>
@@ -584,7 +586,7 @@
                   <div class="product-card-image">
                     <a class="product-card-link product-card-link-image link" href="#">
                       <img src="images/catalog/product-1.jpg" width="216" height="180"
-                        alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
+                        alt="Перфоратор черно-синего цвета.">
                     </a>
                     <div class="product-card-image-button">
                       <button class="product-card-button-buy button button-buy" type="button" name="buy">Купить</button>
@@ -609,7 +611,7 @@
                   <div class="product-card-image">
                     <a class="product-card-link product-card-link-image link" href="#">
                       <img src="images/catalog/product-1.jpg" width="216" height="180"
-                        alt="Перфоратор BOSCH BFG 3000 черно-синего цвета.">
+                        alt="Перфоратор черно-синего цвета.">
                     </a>
                     <div class="product-card-image-button">
                       <button class="product-card-button-buy button button-buy" type="button" name="buy">Купить</button>
@@ -784,6 +786,7 @@
               <label class="footer-mailing-form-label">
                 <input class="mailing-form-input form-input" type="email" name="subscribe"
                   placeholder="email@example.com" required>
+                <span class="visually-hidden">Введите электронную почту</span>
               </label>
               <button class="footer-mailing-form-button button button-buy" type="submit">
                 <span class="visually-hidden">Отправить</span>
@@ -798,7 +801,8 @@
 
             <section class="footer-htmlacademy">
               <h2 class="visually-hidden">Сайт разработчика</h2>
-              <p class="footer-htmlacademy-description">Разработано&nbsp;&nbsp;-&nbsp;&nbsp;<a class="footer-htmlacademy-name link"
+              <p class="footer-htmlacademy-description">Разработано&nbsp;&nbsp;-&nbsp;&nbsp;<a
+                  class="footer-htmlacademy-name link"
                   href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
             </section>
           </div>
