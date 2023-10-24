@@ -981,27 +981,27 @@ img {
 }
 
 .navigation-link-main:active {
-  letter-spacing: -0.1px;
-}
-
-.navigation-link-company:active {
   letter-spacing: -0.15px;
 }
 
+.navigation-link-company:active {
+  letter-spacing: -0.22px;
+}
+
 .navigation-link-catalog:active {
-  letter-spacing: -0.1px;
+  letter-spacing: -0.17px;
 }
 
 .navigation-link-specialoffers:active {
-  letter-spacing: -0.1px;
+  letter-spacing: -0.15px;
 }
 
 .navigation-link-delivery:active {
-  letter-spacing: -0.1px;
+  letter-spacing: -0.15px;
 }
 
 .navigation-link-contacts:active {
-  letter-spacing: -0.25px;
+  letter-spacing: -0.35px;
 }
 
 .navigation-user {
