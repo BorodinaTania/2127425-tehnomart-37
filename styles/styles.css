@@ -822,16 +822,39 @@ img {
 }
 
 .dropdown-button-close:hover {
-  opacity: 0.7;
+  border-color: var(--basic-black);
+}
+
+.dropdown-button-close:hover::before,
+.dropdown-button-close:hover::after {
+  background-color: var(--basic-black);
 }
 
 .dropdown-button-close:focus,
 .dropdown-button-close:focus-visible {
-  opacity: 1;
+  border-color: var(--basic-red-click);
+  outline: none;
+}
+
+.dropdown-button-close:focus::before,
+.dropdown-button-close:focus-visible::before,
+.dropdown-button-close:focus::after,
+.dropdown-button-close:focus-visible::after {
+  background-color: var(--basic-red-click);
 }
 
 .dropdown-button-close:active {
+  border-color: var(--basic-red);
+}
+
+.dropdown-button-close:active::before,
+.dropdown-button-close:active::after {
+  background-color: var(--basic-red);
+}
+
+.dropdown-button-close:disabled {
   opacity: 0.5;
+  pointer-events: none;
 }
 
 .dropdown-user-container {
