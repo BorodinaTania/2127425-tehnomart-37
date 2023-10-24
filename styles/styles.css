@@ -613,6 +613,8 @@ img {
   position: relative;
 }
 
+/*ВСПЛЫВАЮЩИЕ ОКНА*/
+
 .dropdown-container {
   position: absolute;
   top: -1px;
@@ -645,6 +647,7 @@ img {
 }
 
 .dropdown-input {
+  font-size: 15px;
   width: 300px;
   margin: 0 0 7px 5px;
 }
@@ -661,17 +664,11 @@ img {
 
 .dropdown-wrapper {
   margin: 2px 0 38px 5px;
-  font-family: inherit;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 18px;
-  color: var(--basic-black);
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
   gap: 25px;
-  align-items: end;
+  align-items: center;
 }
 
 .dropdown-remember-input {
@@ -724,7 +721,45 @@ img {
 }
 
 .dropdown-remember-label {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--basic-black);
   margin: 0 0 0 13px;
+}
+
+.dropdown-remember-label:hover {
+  opacity: 0.7;
+}
+
+.dropdown-link {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--basic-black);
+  margin: 5px 0 0 0;
+}
+
+.dropdown-link:hover {
+  color: var(--basic-red);
+  text-decoration: underline;
+}
+
+.dropdown-link:focus,
+.dropdown-link:focus-visible {
+  color: var(--basic-red-click);
+  outline: none;
+}
+
+.dropdown-link:active {
+  color: var(--basic-red-hover);
+}
+
+.dropdown-link-disabled {
+  color: #A9A9A9;
+  pointer-events: none;
 }
 
 .dropdown-wrapper-buttons {
@@ -787,11 +822,16 @@ img {
 }
 
 .dropdown-button-close:hover {
-  opacity: 0.6;
+  opacity: 0.7;
+}
+
+.dropdown-button-close:focus,
+.dropdown-button-close:focus-visible {
+  opacity: 1;
 }
 
 .dropdown-button-close:active {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .dropdown-user-container {
@@ -824,9 +864,29 @@ img {
   color: var(--basic-grey);
 }
 
+.dropdown-user-link:hover {
+  color: var(--basic-red);
+}
+
+.dropdown-user-link:focus,
+.dropdown-user-link:focus-visible {
+  color: var(--basic-red-click);
+  outline: none;
+}
+
+.dropdown-user-link:active {
+  color: var(--basic-red-hover);
+}
+
+.dropdown-user-link-disabled {
+  color: #A9A9A9;
+  pointer-events: none;
+}
+
 .dropdown-user-button {
   padding: 9px 10px 8px 13px;
 }
+
 
 .navigation-wrapper-color {
   background-color: var(--basic-grey);
