@@ -4,7 +4,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("..fonts/ptsans/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -45,7 +45,7 @@
   --special-greenlight: #8ED78F;
   --special-ylellow: #FFBF47;
   --special-yellowlight: #FFD180;
-  --font-inter: "PT Sans", sans-serif;
+  --font-inter: "PT Sans", "Arial", sans-serif;
 }
 
 *,
@@ -101,7 +101,7 @@ body {
 
 .title {
   margin: 0;
-  font-family: "Fira Sans", "Arial", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
@@ -367,28 +367,27 @@ img {
   justify-content: space-between;
   align-items: center;
   gap: 34px;
-  padding: 13px 0 13px;
+  padding: 12px 0 14px;
 }
 
 .header-title {
-  margin: 0;
+  margin: 0 0 0 1px;
   margin-right: auto;
   font-family: var(--font-inter);
   font-style: italic;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 18px;
-  letter-spacing: -0.2px;
+  letter-spacing: 0.4px;
   color: var(--basic-red);
 }
 
 .header-address {
   color: #32425C;
   font-family: inherit;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
   font-style: normal;
-  letter-spacing: -0.1px;
 }
 
 .header-phone {
@@ -468,7 +467,7 @@ img {
   background-repeat: no-repeat;
   background-position: center left 21px;
   background-size: 20px 20px;
-  font-size: 15px;
+  font-size: 16px;
   border: none;
   border-radius: 0;
 }
@@ -647,14 +646,13 @@ img {
 }
 
 .dropdown-input {
-  font-size: 15px;
   width: 300px;
   margin: 0 0 7px 5px;
 }
 
 .dropdown-input::placeholder {
   font-family: var(--font-inter);
-  font-size: 15px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
@@ -722,7 +720,7 @@ img {
 
 .dropdown-remember-label {
   font-family: inherit;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 18px;
   color: var(--basic-black);
@@ -735,7 +733,7 @@ img {
 
 .dropdown-link {
   font-family: inherit;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 18px;
   color: var(--basic-black);
@@ -933,25 +931,29 @@ img {
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: start;
 }
 
 .navigation-link {
   display: block;
   font-family: var(--font-inter);
-  font-size: 15px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
   color: var(--basic-white);
-  padding: 19px 23px 27px;
+  padding: 19px 23px 27px 24px;
 }
 
-/* Чтобы меню осталось на месте при сохранении размеров контейнера
+/* Чтобы меню осталось на месте при сохранении размеров контейнера */
 
-.navigation-link-main {
+/* .navigation-link-main {
   padding-left: 0;
 } */
+
+.navigation-link-main {
+  padding-left: 25px;
+}
 
 .navigation-link:hover {
   background-color: var(--basic-grey-hover);
@@ -978,31 +980,27 @@ img {
 }
 
 .navigation-link-main:active {
-  letter-spacing: 0.88px;
+  letter-spacing: -0.1px;
 }
 
 .navigation-link-company:active {
-  letter-spacing: 0.32px;
+  letter-spacing: -0.15px;
 }
 
 .navigation-link-catalog:active {
-  letter-spacing: 0.4px;
-}
-
-.navigation-link-news:active {
-  letter-spacing: 0.535px;
+  letter-spacing: -0.1px;
 }
 
 .navigation-link-specialoffers:active {
-  letter-spacing: 0.48px;
+  letter-spacing: -0.1px;
 }
 
 .navigation-link-delivery:active {
-  letter-spacing: 0.5px;
+  letter-spacing: -0.1px;
 }
 
 .navigation-link-contacts:active {
-  letter-spacing: 0.2px;
+  letter-spacing: -0.25px;
 }
 
 .navigation-user {
@@ -1062,15 +1060,6 @@ img {
 
 .navigation-user-link-favourites {
   gap: 8px;
-}
-
-.navigation-user-name {
-  color: var(--basic-background);
-  font-family: inherit;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
 }
 
 .navigation-user-favourites-number,
@@ -1191,15 +1180,14 @@ img {
 }
 
 .slider {
-  position: relative;
-  width: 770px;
-  height: 390px;
   grid-column: 1 / span 2;
+  position: relative;
 }
 
 .slider-item {
   width: 770px;
   height: 390px;
+  background-color: var(--basic-grey);
 }
 
 .slider-drill {
@@ -1302,13 +1290,14 @@ img {
 
 .slider-bullets {
   position: absolute;
-  top: 94%;
+  bottom: 15px;
   right: 47.5%;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: end;
   gap: 8px;
+  margin: 31px 0 0 0;
 }
 
 .slider-bullet {
@@ -1352,8 +1341,8 @@ img {
 
 .slider-button-open-catalog {
   position: absolute;
-  bottom: 41px;
-  left: 51px;
+  bottom: 10%;
+  left: 6.7%;
   min-width: 195px;
   max-width: 665px;
   padding: 13px 13px 14px 13px;
@@ -1418,7 +1407,7 @@ img {
 }
 
 .filter-group-nutrition {
-  padding: 0 0 42px;
+  padding: 0 0 43px;
 }
 
 .filter-title {
@@ -1579,7 +1568,7 @@ input[type='number'] {
 }
 
 .filter-item:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 13px;
 }
 
 .filter-item-radio {
@@ -1587,7 +1576,7 @@ input[type='number'] {
 }
 
 .filter-item-radio:not(:last-child) {
-  margin-bottom: 11px;
+  margin-bottom: 12px;
 }
 
 .filter-label {
@@ -1598,12 +1587,12 @@ input[type='number'] {
 
 .filter-label-title {
   font-family: inherit;
-  font-size: 12.5px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
   color: var(--basic-black);
-  margin: 0 0 0 11px;
+  padding: 0 0 2px 11px;
 }
 
 .filter-label:hover {
@@ -1706,7 +1695,7 @@ input[type='number'] {
 .product-sorting {
   width: 280px;
   min-height: 40px;
-  padding: 8px 14px 6px;
+  padding: 8px 32px 6px 14px;
   font-family: var(--font-inter);
   font-style: normal;
   font-weight: 400;
@@ -1793,11 +1782,13 @@ input[type='number'] {
   background-position: center left 25px;
   background-size: 14px 14px;
   padding: 11px 11px 11px 33px;
+  word-wrap: break-word;
 }
 
 .product-card-button-favourites {
   min-width: 135px;
   padding: 9px 10px 9px 13px;
+  word-wrap: break-word;
 }
 
 .product-card-image:hover .product-card-image-button,
@@ -1945,6 +1936,7 @@ input[type='number'] {
   justify-content: center;
   align-items: center;
   gap: 8px;
+  margin-left: 4px;
 }
 
 .pagination-link {
@@ -2003,13 +1995,11 @@ input[type='number'] {
 }
 
 .service-title {
-  margin: 0 0 30px;
+  margin: 0 0 29px;
 }
 
 .service-description {
-  font-family: inherit;
-  font-size: 17px;
-  font-style: normal;
+  font-size: 18px;
   font-weight: 400;
   line-height: 24px;
   margin: 0 0 64px;
@@ -2081,7 +2071,6 @@ input[type='number'] {
 
 .service-item-title {
   color: var(--basic-grey-hover);
-  font-family: inherit;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -2091,11 +2080,6 @@ input[type='number'] {
 }
 
 .service-item-description {
-  font-family: inherit;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
   color: var(--basic-black);
   margin: 0;
 }
@@ -2110,20 +2094,15 @@ input[type='number'] {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 170px;
-  padding: 52px 0 51px;
+  padding: 52px 0 49px;
 }
 
 .about-title {
   text-align: start;
-  margin: 0 0 23px;
+  margin: 0 0 22px;
 }
 
 .about-description {
-  font-family: inherit;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
   color: var(--basic-grey-click);
   margin: 0 0 26px;
 }
@@ -2131,12 +2110,12 @@ input[type='number'] {
 .about-button {
   min-width: 195px;
   min-height: 45px;
-  margin: 25px 0 0;
-  padding: 13.5px 10px;
+  margin: 25px 0 25px;
+  padding: 13.5px 10px 13.5px 13px;
 }
 
 .contacts-description {
-  margin: 0 0 29px;
+  margin: 0 0 31px;
 }
 
 .contacts-map {
@@ -2195,25 +2174,13 @@ input[type='number'] {
 }
 
 .footer-contacts-address {
-  font-family: inherit;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
   color: #F3F7F9;
-  margin: 7px 0 0;
-  letter-spacing: -0.25px;
+  margin: 6px 0 1px;
 }
 
 .footer-contacts-phone {
-  font-family: inherit;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
   color: #F3F7F9;
   margin: 0;
-  letter-spacing: 0.1px;
 }
 
 .footer-contacts-phone:hover {
@@ -2296,18 +2263,17 @@ input[type='number'] {
 
 .footer-mailing {
   text-align: end;
-  padding: 16px 0 0;
+  padding: 15px 0 0;
 }
 
 .footer-mailing-title {
   font-family: inherit;
-  font-size: 15px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
   color: var(--basic-white);
-  margin: 0;
-  letter-spacing: -0.1px;
+  margin: 0 0 1px;
 }
 
 .mailing-title-offers {
@@ -2316,14 +2282,8 @@ input[type='number'] {
 
 .footer-mailing-email {
   display: block;
-  font-family: inherit;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
   color: var(--special-yellowlight);
   margin: 0 0 29px;
-  letter-spacing: 0.3px;
 }
 
 .footer-mailing-email:hover {
@@ -2357,13 +2317,12 @@ input[type='number'] {
 .mailing-form-input {
   min-width: 220px;
   font-family: inherit;
-  font-size: 13px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
   border-radius: 2px 0 0 2px;
   padding: 10px 16px 12px 16px;
-  letter-spacing: 0.3px;
 }
 
 .footer-mailing-form-button {
@@ -2385,26 +2344,24 @@ input[type='number'] {
 }
 
 .footer-copyright {
-  font-family: inherit;
-  font-size: 13px;
+  font-family: var(--font-inter);
+  font-size: 14px;
   line-height: 18px;
   color: var(--basic-white);
   margin: 0;
-  letter-spacing: 0.15px;
 }
 
 .footer-htmlacademy-description {
   font-family: inherit;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
   color: var(--basic-white);
   margin: 0;
-  letter-spacing: 0.3px;
 }
 
 .footer-htmlacademy-name {
   font-family: inherit;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
   color: var(--special-yellowlight);
   margin: 0;
