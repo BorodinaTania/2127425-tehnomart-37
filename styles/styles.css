@@ -370,6 +370,8 @@ img {
   padding: 12px 0 14px;
 }
 
+/* Могу ошибаться, но на мой взгляд в макете представлен другой шрифт, не "PT Sans", хотя в описании указан он */
+
 .header-title {
   margin: 0 0 0 1px;
   margin-right: auto;
@@ -462,7 +464,7 @@ img {
   width: 716px;
   height: 45px;
   background-color: var(--basic-grey-click);
-  padding: 13px 14px 11px 53px;
+  padding: 13px 14px 11px 53.5px;
   background-image: url("../images/search.svg");
   background-repeat: no-repeat;
   background-position: center left 21px;
@@ -1161,7 +1163,7 @@ img {
 .categories-item-technic::before {
   content: "";
   position: absolute;
-  top: 30%;
+  top: 31%;
   right: 10%;
   width: 85px;
   height: 65px;
@@ -1359,6 +1361,10 @@ img {
   flex-direction: column;
   flex-wrap: wrap;
   gap: 29px;
+}
+
+.stocks-item {
+  padding: 22px 25px 31px;
 }
 
 .stocks-item-discounts {
@@ -1740,7 +1746,7 @@ input[type='number'] {
 .product-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 31px 33px;
+  gap: 30px 33px;
   align-items: center;
   text-align: center;
 }
@@ -1994,7 +2000,7 @@ input[type='number'] {
 
 .service {
   background-color: #F4F7F9;
-  padding: 52px 115px 53px;
+  padding: 53px 115px 53px;
 }
 
 .service-title {
@@ -2018,7 +2024,7 @@ input[type='number'] {
 
 .service-item {
   position: relative;
-  padding: 160px 35px 50px 31px;
+  padding: 161px 35px 50px 31px;
   background-color: var(--basic-white);
   border-radius: 2px;
   box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
@@ -2027,7 +2033,7 @@ input[type='number'] {
 .service-item-delivery::before {
   content: "";
   position: absolute;
-  top: 37px;
+  top: 39px;
   left: 35px;
   width: 86.2px;
   height: 63px;
@@ -2043,7 +2049,7 @@ input[type='number'] {
 .service-item-guarantee::before {
   content: "";
   position: absolute;
-  top: 29px;
+  top: 31px;
   left: 35px;
   width: 85.5px;
   height: 76.5px;
@@ -2059,7 +2065,7 @@ input[type='number'] {
 .service-item-credit::before {
   content: "";
   position: absolute;
-  top: 28px;
+  top: 31px;
   left: 37px;
   width: 76.5px;
   height: 76.5px;
