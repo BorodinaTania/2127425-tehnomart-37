@@ -370,7 +370,7 @@ img {
   padding: 12px 0 14px;
 }
 
-/* Могу ошибаться, но на мой взгляд в макете представлен другой шрифт, не "PT Sans", хотя в описании указан он */
+/* На мой взгляд в макете представлен другой шрифт, не "PT Sans", хотя в описании указан он, поэтому в РР не совпадает */
 
 .header-title {
   margin: 0 0 0 1px;
@@ -949,7 +949,7 @@ input::-webkit-search-results-decoration {
   background-color: var(--basic-grey);
 }
 
-/* Увеличиваем размеры контейнера, чтобы меню выглядело единообразно */
+/* Увеличиваем размеры контейнера, чтобы меню в любом состоянии выглядело единообразно и никуда не двигалось */
 
 .container-menu {
   width: 100%;
@@ -981,12 +981,6 @@ input::-webkit-search-results-decoration {
   padding: 19px 23px 27px 24px;
   letter-spacing: -0.05px;
 }
-
-/* Чтобы меню осталось на месте при сохранении размеров контейнера */
-
-/* .navigation-link-main {
-  padding-left: 0;
-} */
 
 .navigation-link-main {
   padding-left: 26px;
