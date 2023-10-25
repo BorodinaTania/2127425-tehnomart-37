@@ -1179,7 +1179,24 @@ input::-webkit-search-results-decoration {
   background-position: center right 38px;
 }
 
-/* Иконка серая, но при переполнении блока встает куда нужно */
+/* Перекрашивает иконку в белый цвет, но при переполнении блока нужно менять местоположение. */
+
+.categories-item-technic {
+  background-color: var(--special-lilac);
+  position: relative;
+}
+
+.categories-icon-technic {
+  position: absolute;
+  color: var(--basic-white);
+  top: 31%;
+  right: 10%;
+  width: 86px;
+  height: 67px;
+  fill: currentColor;
+}
+
+/* Иконка серая, но при переполнении встает куда нужно. Также блок пригодится, если маски не сработают. */
 
 /* .categories-item-technic {
   background-color: var(--special-lilac);
@@ -1187,9 +1204,10 @@ input::-webkit-search-results-decoration {
   background-position: center right 38px;
 } */
 
-/*Перекрашивает иконку в белый цвет, но при переполнении нужно менять местоположение*/
+/* МАСКИ.
+Перекрашивает иконку в белый цвет, но также при переполнении нужно менять местоположение. */
 
-.categories-item-technic {
+/* .categories-item-technic {
   background-color: var(--special-lilac);
   position: relative;
 }
@@ -1208,7 +1226,7 @@ input::-webkit-search-results-decoration {
   mask-position: center;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
-}
+} */
 
 .popular-wrapper {
   display: grid;
@@ -2062,9 +2080,40 @@ input[type='number'] {
   background-color: var(--basic-white);
   border-radius: 2px;
   box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+  color: var(--basic-red-hover);
 }
 
-.service-item-delivery::before {
+.service-item svg {
+  fill: currentColor;
+}
+
+.service-item-delivery svg {
+  position: absolute;
+  top: 39px;
+  left: 35px;
+  width: 86.2px;
+  height: 63px;
+}
+
+.service-item-guarantee svg {
+  position: absolute;
+  top: 31px;
+  left: 35px;
+  width: 85.5px;
+  height: 76.5px;
+}
+
+.service-item-credit svg {
+  position: absolute;
+  top: 31px;
+  left: 37px;
+  width: 76.5px;
+  height: 76.5px;
+}
+
+/* Вставка картинок через маски */
+
+/* .service-item-delivery::before {
   content: "";
   position: absolute;
   top: 39px;
@@ -2110,7 +2159,7 @@ input[type='number'] {
   mask-position: center;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
-}
+} */
 
 .service-item-title {
   color: var(--basic-grey-hover);
