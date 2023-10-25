@@ -474,6 +474,13 @@ img {
   border-radius: 0;
 }
 
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+
 .navigation-search-input::placeholder {
   color: var(--basic-white);
 }
@@ -503,6 +510,7 @@ img {
 }
 
 @-moz-document url-prefix() {
+
   .navigation-search-input:focus::-moz-placeholder,
   .navigation-search-input:focus-visible::-moz-placeholder {
     color: var(--basic-greylight);
