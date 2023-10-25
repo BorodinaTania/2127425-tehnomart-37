@@ -491,15 +491,41 @@ img {
   color: var(--basic-greylight);
 }
 
+.navigation-search-input:disabled::-webkit-input-placeholder {
+  color: var(--basic-greylight);
+  opacity: 0.5;
+}
+
+@-moz-document url-prefix() {
+  .navigation-search-input:not(:disabled):hover::-moz-placeholder {
+    color: var(--basic-greylight);
+  }
+}
+
+@-moz-document url-prefix() {
+  .navigation-search-input:focus::-moz-placeholder,
+  .navigation-search-input:focus-visible::-moz-placeholder {
+    color: var(--basic-greylight);
+  }
+}
+
+@-moz-document url-prefix() {
+  .navigation-search-input:active::-moz-placeholder {
+    color: var(--basic-greylight);
+  }
+}
+
+@-moz-document url-prefix() {
+  .navigation-search-input:disabled::-moz-placeholder {
+    color: var(--basic-greylight);
+    opacity: 0.5;
+  }
+}
+
 .navigation-search-input:hover {
   background-color: var(--basic-background);
   background-image: url("../images/search-dark.svg");
   border: none;
-}
-
-.navigation-search-input:disabled::-webkit-input-placeholder {
-  color: var(--basic-greylight);
-  opacity: 0.5;
 }
 
 .navigation-search-input:focus,
@@ -1145,7 +1171,7 @@ img {
   background-position: center right 38px;
 }
 
-/* Иконка серая, но при переполнении встает куда нужно */
+/* Иконка серая, но при переполнении блока встает куда нужно */
 
 /* .categories-item-technic {
   background-color: var(--special-lilac);
